@@ -1,6 +1,6 @@
 import './footer.css';
 
-function SectionThree() {
+function StepTwo() {
   return (
     <div className="Footer">
 
@@ -8,4 +8,4 @@ function SectionThree() {
   );
 }
 
-export default SectionThree;
+export default StepTwo;

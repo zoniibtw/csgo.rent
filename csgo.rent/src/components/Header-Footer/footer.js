@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './footer.css';
+import './css/footer.css';
 
-function footer() {
+function Footer() {
   return (
-    <div className="Footer">
+    <div className="footer">
 
     </div>
   );
 }
 
-export default App;
+export default Footer;
