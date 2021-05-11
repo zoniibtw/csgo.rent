@@ -1,0 +1,24 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 10vh;
+  text-align: center;
+}
+
+.footer-container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-width: 60vw;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-media > a > img {
+  width: 32px;
+  height: auto;
+}

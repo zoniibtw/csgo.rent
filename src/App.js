@@ -6,6 +6,9 @@ import Market from './pages/Market';
 import Settings from './pages/Settings';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 
+/* The header gets rendered on every .js page file since we are in need of two
+ different headers (header1 when u are signed in, header2 for guests). */
+
 function App() {
   return (
     <Router>
