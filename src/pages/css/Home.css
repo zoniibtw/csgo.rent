@@ -1,0 +1,13 @@
+body {
+  background-color: #ececec;
+}
+
+.fullpage-container {
+  height: 100vh;
+}
+
+.background-image {
+  background-image: url(#);
+}
+
+/* opacity will be changed to 30% later. */

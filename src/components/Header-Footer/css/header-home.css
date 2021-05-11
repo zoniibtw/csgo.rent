@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 6vh;
+}
+
+.header-container {
+  width: 85vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-type {
+  height: 35px;
+  width: auto;
+}
+
+.logo-type > a {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.login-button {
+  width: 180px;
+  height: 35px;
+  background-color: #7b2cbf;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
