@@ -82,6 +82,16 @@
   justify-content: center;
 }
 
+.money-icon {
+  height: 20px !important;
+  width: auto;
+}
+
+.instruction-icon > img {
+  height: 38px;
+  width: auto;
+}
+
 .item-text {
   min-width: auto;
   max-width: 14vw;
