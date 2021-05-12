@@ -10,8 +10,9 @@ function Home() {
     <div className="home">
       <div className="fullpage-container">
           <HeaderHome className="header-home"></HeaderHome>
-          <SectionOne className="section-one"></SectionOne>
-        <div className="background-image"></div>
+          <div className="section-one-container">
+            <SectionOne className="section-one"></SectionOne>
+          </div>
       </div>
       <SectionTwo className="section-two"></SectionTwo>
       <SectionThree className="section-three"></SectionThree>

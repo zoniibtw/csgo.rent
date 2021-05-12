@@ -1,4 +1,5 @@
 import './css/section-three.css';
+import Avatar from '../../img/avatar.jpg'
 
 function SectionThree() {
   return (
@@ -9,7 +10,7 @@ function SectionThree() {
         </div>
         <div className="management-container">
           <div className="management-item">
-            <img></img>
+            <img src={Avatar}></img>
             <div className="management-info">
               <h3>Niklas Jörgensen</h3>
               <p>Projekt Ledare</p>
@@ -17,7 +18,7 @@ function SectionThree() {
           </div>
 
           <div className="management-item">
-            <img></img>
+            <img src={Avatar}></img>
             <div className="management-info">
               <h3>Anton Persson</h3>
               <p>Grundare & Ägare</p>
@@ -25,7 +26,7 @@ function SectionThree() {
           </div>
 
           <div className="management-item">
-            <img></img>
+            <img src={Avatar}></img>
             <div className="management-info">
               <h3>Eric Jörgensen</h3>
               <p>Redovisningsekonom</p>
