@@ -28,7 +28,7 @@ function SectionOne() {
         </div>
         <div className="instruction-container">
           <div className="instruction-item item-one">
-            <div className="instruction-icon"><img src={Money} /></div>
+            <div className="instruction-icon money-icon"><img src={Money} /></div>
             <div className="item-text">
               <p>Välj vilken prenumerations plan du vill prenumerera till. Alternativt väljer du skinet du vill låna och väljer hur länge du vill låna skinet.</p>
             </div>

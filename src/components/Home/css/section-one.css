@@ -80,11 +80,12 @@
   height: 45px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.money-icon {
-  height: 20px !important;
-  width: auto;
+.money-icon > img {
+  height: 25px !important;
+  width: auto !important;
 }
 
 .instruction-icon > img {
