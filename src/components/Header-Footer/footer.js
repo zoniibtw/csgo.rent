@@ -9,21 +9,25 @@ function Footer() {
     <div className="footer">
       <div className="footer-container">
         <div className="social-media">
-          <a><img src={Twitter}></img></a>
-          <a><img src={Facebook}></img></a>
-          <a><img src={Instagram}></img></a>
+          <div className="social-media-container">
+            <a href="https://twitter.com/csgo_rent" target="_blank"><img src={Twitter}></img></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src={Facebook}></img></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src={Instagram}></img></a>
+          </div>
         </div>
 
         <div className="footer-links">
           <Link><a>Information</a></Link>
-          <Link><a>Subscriptions</a></Link>
-          <Link><a>Who we are</a></Link>
-          <Link><a>Buy today</a></Link>
+          <Link><a>Abonnemang</a></Link>
+          <Link><a>Vilka vi är</a></Link>
+          <Link><a>Köp idag</a></Link>
         </div>
 
         <div className="terms-privacy">
-          <a>Terms of Use</a>
-          <a>Privacy & Policy</a>
+          <div className="terms-privacy-container">
+            <a>Terms of Use</a>
+            <a>Privacy & Policy</a>
+          </div>
         </div>
 
         <div className="copy-right">
