@@ -1,19 +1,18 @@
 <?php
 
-Class Loan{
+Class skins{
 
     private $conn;
-    private $table = 'loan';
+    private $table = 'skins';
 
     public $skinID;
-    public $userID;
-    public $loanID;
+    public $skinName;
 
     public function __construct($db){
         $this->conn = $db;
     }
 
-    public function readLoan(){
+    public function readSkins(){
 
         $query = 'SELECT * FROM ' . $this->table . '';
 
@@ -24,41 +23,36 @@ Class Loan{
         return $stmt;
     }
 
-    public function readSingleLoan(){
-        $query = 'SELECT * FROM ' . $this->table . ' WHERE loanID = ?';
+    public function readSingleSkins(){
+        $query = 'SELECT * FROM ' . $this->table . ' WHERE skinID = ?';
 
         $stmt = $this->conn->prepare($query);
 
-        $stmt->bindParam(1, $this->loanID);
+        $stmt->bindParam(1, $this->skinID);
 
         $stmt->execute();
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $this->userID = $row['userID'];
+        $this->skinName = $row['skinName'];
         $this->skinID = $row['skinID'];
-        $this->loanID = $row['loanID'];
-
     }
 
-            public function updateLoan(){
+            public function updateSkins(){
 
                 $query = 'UPDATE ' . $this->table . '
                 SET
-                    userID = :userID,
-                    skinID = :skinID
+                    skinName = :skinName
                 WHERE
-                    loanID = :loanID';
+                    skinID = :skinID';
 
                     $stmt = $this->conn->prepare($query);
         
-                    $this->userID =htmlspecialchars(strip_tags($this->userID));
                     $this->skinID =htmlspecialchars(strip_tags($this->skinID));
-                    $this->loanID =htmlspecialchars(strip_tags($this->loanID));
+                    $this->skinName =htmlspecialchars(strip_tags($this->skinName));
 
-                    $stmt->bindParam(':userID', $this->userID);
                     $stmt->bindParam(':skinID', $this->skinID);
-                    $stmt->bindParam(':loanID', $this->loanID);
+                    $stmt->bindParam(':skinName', $this->skinName);
 
                     if($stmt->execute()){
                         return true;
@@ -68,20 +62,17 @@ Class Loan{
                     return false;
             }
 
-    public function createLoan(){
+    public function createSkins(){
 
         $query = 'INSERT INTO ' . $this->table . '
         SET
-            skinID = :skinID,
-            userID = :userID';
+            skinName = :skinName';
 
             $stmt = $this->conn->prepare($query);
 
-            $this->skinID = htmlspecialchars(strip_tags($this->skinID));
-            $this->userID = htmlspecialchars(strip_tags($this->userID));
+            $this->skinName = htmlspecialchars(strip_tags($this->skinName));
 
-            $stmt->bindParam(':skinID', $this->skinID);
-            $stmt->bindParam(':userID', $this->userID);
+            $stmt->bindParam(':skinName', $this->skinName);
             if($stmt->execute()){
                 return true;
             }

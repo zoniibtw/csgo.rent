@@ -2,10 +2,10 @@
 
 Class Database {
     //DB Params
-    private $host = 'private-db-mysql-ams3-05825-do-user-9217528-0.b.db.ondigitalocean.com:25060';
-    private $db_name = 'defaultdb';
-    private $username = 'doadmin';
-    private $password = 'da2lbbqzgqaqr3gm';
+    private $host = 'localhost';
+    private $db_name = 'csgorent';
+    private $username = 'root';
+    private $password = 'Hacked!@#$';
     private $conn;
     //DB Connect
     public function connect(){

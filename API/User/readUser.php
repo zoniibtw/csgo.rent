@@ -1,5 +1,5 @@
 <?php
-//Headers
+
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
@@ -7,12 +7,11 @@ include_once '../../Config/Database.php';
 include_once '../../Models/user.php';
 
 
-//Instantiate DB & connect
 $database = new Database();
 $db = $database->connect();
 
 $user = new User($db);
-$result = $user->read_user();
+$result = $user->readUser();
 
 $num = $result->rowCount();
 
