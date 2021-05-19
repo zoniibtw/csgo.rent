@@ -1,4 +1,11 @@
 import React from 'react';
+import './App.css';
+import Footer from './components/Header-Footer/footer';
+import Home from './pages/Home';
+import Market from './pages/Market';
+import Settings from './pages/Settings';
+import Test from './pages/test';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 
 class App extends React.Component {
 
@@ -59,16 +66,17 @@ class App extends React.Component {
         const { userID, username, data } = this.state;
 
         return (
+        <Router>
             <div className="App">
-                <ul>
-                    {data.map(item => (
-                        <li key={item.id}>
-                            UserID: {item.userID} | Username: { item.username}
-                        </li>
-                    ))}
-                </ul>
-                <button onClick={ () => this.createAccount() }>Create Account</button>
+                <Switch>
+                    <Route path="/" component={Test} />
+                    <Route path="/test" exact component={Home} />
+                    <Route path="/home" component={Market} />
+                    <Route path="/settings" component={Settings} />
+                </Switch>
+                <Footer />
             </div>
+        </Router>
         );
 
     }

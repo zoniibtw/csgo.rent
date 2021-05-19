@@ -1,0 +1,99 @@
+.section-one {
+  color: white;
+}
+
+.description-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.description-login {
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+}
+
+.description {
+  width: 30vw;
+}
+
+.description > h1 {
+  font-size: 3rem;
+  margin-bottom: 0.7rem;
+}
+
+.description > p {
+  font-size: 1.2rem;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+}
+
+.login > button {
+  width: 230px;
+  height: 55px;
+
+  color: white;
+  border: none;
+  border-radius: 6px;
+  background-color: #7b2cbf;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.instruction {
+  margin-top: 3.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.instruction-container-all {
+  width: 70vw;
+}
+
+.title {
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.title > h1 {
+  text-align: center;
+}
+
+.instruction-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.instruction-item {
+  max-width: 19vw;
+}
+
+.instruction-icon {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.money-icon > img {
+  height: 25px !important;
+  width: auto !important;
+}
+
+.instruction-icon > img {
+  height: 38px;
+  width: auto;
+}
+
+.item-text {
+  min-width: auto;
+  max-width: 14vw;
+}
