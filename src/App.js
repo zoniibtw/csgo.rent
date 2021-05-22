@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Footer from './components/Header-Footer/footer';
 import Home from './pages/Home';
@@ -7,11 +7,11 @@ import Settings from './pages/Settings';
 import Test from './pages/test';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 
-class App extends React.Component {
+class App extends Component {
 
-    async createAccount() {
+    async postData () {
 
-        try  {
+        try {
 
             let result = await fetch('http://csgo.rent/csgorentApi/API/User/createUser.php', {
                 method: 'post',
@@ -21,14 +21,12 @@ class App extends React.Component {
                     'Content-type': 'application/json',
                 },
                 body: JSON.stringify({
-                    username: 'myusername',
-                    password: 'mypassword',
-                    firstName: 'myFirstName',
-                    lastName: 'myLastName'
+                    key1: 'myusername'
                 })
+
             });
 
-            console.log('Result' + result)
+            console.log('Result' + result);
 
         } catch(e) {
             console.log(e)
@@ -68,6 +66,7 @@ class App extends React.Component {
         return (
         <Router>
             <div className="App">
+                <button onClick={ () => this.postData() }>post data</button>
                 <Switch>
                     <Route path="/" component={Test} />
                     <Route path="/test" exact component={Home} />
