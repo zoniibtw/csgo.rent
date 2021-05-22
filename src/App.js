@@ -29,7 +29,7 @@ class App extends Component {
             console.log('Result' + result);
 
         } catch(e) {
-            console.log(e);
+            console.log(e)
         }
 
     }
