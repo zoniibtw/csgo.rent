@@ -78,35 +78,35 @@ Class User{
                     return false;
             }
 
-    public function createUser(){
+            public function create_user(){
 
-        $query = 'INSERT INTO ' . $this->table . '
-        SET
-            username = :username,
-            password = :password,
-            firstName = :firstName,
-            lastName = :lastName';
-
-            $stmt = $this->conn->prepare($query);
-
-            $this->username = htmlspecialchars(strip_tags($this->username));
-            $this->password = htmlspecialchars(strip_tags($this->password));
-            $this->firstName = htmlspecialchars(strip_tags($this->firstName));
-            $this->lastName = htmlspecialchars(strip_tags($this->lastName));
-
-            $this->password=password_hash($this->password, PASSWORD_DEFAULT);
-
-            $stmt->bindParam(':username', $this->username);
-            $stmt->bindParam(':password', $this->password);
-            $stmt->bindParam(':firstName', $this->firstName);
-            $stmt->bindParam(':lastName', $this->lastName);
-
-            if($stmt->execute()){
-                return true;
+                $query = 'INSERT INTO ' . $this->table . '
+                SET
+                    username = :username,
+                    password = :password,
+                    firstName = :firstName,
+                    lastName = :lastName';
+        
+                    $stmt = $this->conn->prepare($query);
+        
+                    $this->username = htmlspecialchars(strip_tags($this->username));
+                    $this->password = htmlspecialchars(strip_tags($this->password));
+                    $this->firstName = htmlspecialchars(strip_tags($this->firstName));
+                    $this->lastName = htmlspecialchars(strip_tags($this->lastName));
+        
+                    $this->password=password_hash($this->password, PASSWORD_DEFAULT);
+        
+                    $stmt->bindParam(':username', $this->username);
+                    $stmt->bindParam(':password', $this->password);
+                    $stmt->bindParam(':firstName', $this->firstName);
+                    $stmt->bindParam(':lastName', $this->lastName);
+        
+                    if($stmt->execute()){
+                        return true;
+                    }
+        
+                    printf("Error: %s.\n", $stmt->error);
+                    return false;
             }
-
-            printf("Error: %s.\n", $stmt->error);
-            return false;
-    }
 }
 ?>
