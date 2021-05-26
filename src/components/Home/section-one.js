@@ -4,6 +4,7 @@ import Arrows from '../../img/icon-arrows.png';
 import Happy from '../../img/icon-satisfied.png';
 import Contract from '../../img/icon-contract.png';
 import Money from '../../img/icon-money.png';
+import {postData} from '../API/post';
 
 function SectionOne() {
   return (
@@ -15,7 +16,7 @@ function SectionOne() {
             <p>Vi erbjuder en tjänst där du som användare slipper att spendera eller investera stora summor pengar för att kunna använda dig av skins. Istället betalar du varje månad en bestämd summa för att kunna ta ut det skin du vill spela med. </p>
           </div>
           <div className="login">
-            <button>Prova nu med BankID</button>
+            <button onClick={ postData() }>Prova nu med BankID</button>
           </div>
         </div>
       </div>
