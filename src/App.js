@@ -9,32 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component {
 
-    async postData () {
-
-        try {
-
-            let result = await fetch('http://csgo.rent/csgorentApi/API/User/createUser.php', {
-                method: 'post',
-                mode: 'no-cors',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-type': 'application/json',
-                },
-                body: JSON.stringify({
-                    key1: 'myusername'
-                })
-
-            });
-
-            console.log('Result' + result);
-
-        } catch(e) {
-            console.log(e)
-        }
-
-    }
-
-    constructor(props) {
+    /* constructor(props) {
 
         super(props);
 
@@ -57,21 +32,20 @@ class App extends Component {
                 console.log(err);
             });
 
-    }
+    } */
 
     render() {
 
-        const { userID, username, data } = this.state;
+        // const { userID, username, data } = this.state;
 
         return (
         <Router>
             <div className="App">
-                <button onClick={ () => this.postData() }>post data</button>
                 <Switch>
-                    <Route path="/" component={Test} />
-                    <Route path="/test" exact component={Home} />
-                    <Route path="/home" component={Market} />
+                    <Route path="/test" exact component={Test} />
+                    <Route path="/market" component={Market} />
                     <Route path="/settings" component={Settings} />
+                    <Route path="/" component={Home} />
                 </Switch>
                 <Footer />
             </div>
