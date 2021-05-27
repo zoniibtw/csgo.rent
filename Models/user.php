@@ -78,17 +78,7 @@ Class User{
                     return false;
             }
 
-    public function create_user(){
-		            function RandomString()
-            {
-                $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                $randstring = '';
-                for ($i = 0; $i < 20; $i++) {
-                    $randstring = $randstring.$characters[rand(0, strlen($characters)-1)];
-                }
-                return $randstring;
-            }
-
+    public function createUser(){
         //Create query
         $query = 'INSERT INTO ' . $this->table . '
         SET
