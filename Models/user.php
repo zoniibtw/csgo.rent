@@ -97,7 +97,7 @@ Class User{
             $this->firstName =htmlspecialchars(strip_tags($this->firstName));
             $this->lastName =htmlspecialchars(strip_tags($this->lastName));
 
-            $this->password=password_hash($this->password, PASSWORD_DEFAULT);
+            //$this->password=password_hash($this->password, PASSWORD_DEFAULT);
 
             //Bind data
             $stmt->bindParam(':username', $this->username);
