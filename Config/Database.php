@@ -2,10 +2,10 @@
 
 Class Database {
     //DB Params
-    private $host = 'csgo-rent-db-do-user-9217528-0.b.db.ondigitalocean.com';
-    private $db_name = 'csgo-rent-db';
-    private $username = 'doadmin';
-    private $password = 'n0234vcvghqwyfy4';
+    private $host = '206.81.27.23';
+    private $db_name = 'csgorent';
+    private $username = 'admin';
+    private $password = 'f87f7cb906f269d7bca1d4d8df380c253700d1aa9cec832b';
     private $conn;
     //DB Connect
     public function connect(){
