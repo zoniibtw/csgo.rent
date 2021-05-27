@@ -55,7 +55,6 @@ function SectionOne() {
         </div>
         </div>
       </div>
-      <div className="background-img"></div>
     </div>
   );
 }
