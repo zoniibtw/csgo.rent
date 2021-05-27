@@ -68,7 +68,7 @@ function SectionTwo() {
             </div>
           </div>
           <div className="item-button">
-            <button onClick={ postData() }>BÖRJA IDAG</button>
+            <button onClick={ () => this.postData() }>BÖRJA IDAG</button>
           </div>
           <div className="info-box">
             <ul className="info-container">

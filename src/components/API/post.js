@@ -1,4 +1,6 @@
-export const postData = async() => {
+class Post extends App {
+
+    async postData() {
 
     try {
 
@@ -13,15 +15,21 @@ export const postData = async() => {
                 username: 'test',
                 password: 'test',
                 firstName: 'test',
-                lastName: 'test',
+                lastName: 'test'
             })
 
         });
 
-        console.log('Result' + result);
+        console.log(result)
+        return true;
 
     } catch(e) {
         console.log(e)
+        return false;
     }
 
 }
+
+}
+
+export default Post;
