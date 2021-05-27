@@ -2,7 +2,7 @@ export const postData = async() => {
 
     try {
 
-        let result = await fetch('http://csgo.rent/csgorentApi/API/User/createUser.php', {
+        let result = await fetch('https://csgo-rent-api-lrib5.ondigitalocean.app/API/User/createUser.php', {
             method: 'POST',
             mode: 'no-cors',
             headers: {

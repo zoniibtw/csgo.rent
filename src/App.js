@@ -23,7 +23,7 @@ class App extends Component {
 
     componentDidMount() {
 
-        fetch('http://csgo.rent/csgorentApi/API/User/readUser.php')
+        fetch('https://csgo-rent-api-lrib5.ondigitalocean.app/API/User/readUser.php')
             .then(res => res.json())
             .then(json => {
                 const { userID, username, data} = json;
