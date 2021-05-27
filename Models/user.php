@@ -79,38 +79,32 @@ Class User{
             }
 
     public function createUser(){
-        //Create query
+
         $query = 'INSERT INTO ' . $this->table . '
         SET
             username = :username,
             password = :password,
             firstName = :firstName,
-            lastName = :lastName,'
-			;
+            lastName = :lastName';
 
-            //Preparing statement
             $stmt = $this->conn->prepare($query);
 
-            //Clean data
-            $this->username =htmlspecialchars(strip_tags($this->username));
-            $this->password =htmlspecialchars(strip_tags($this->password));
-            $this->firstName =htmlspecialchars(strip_tags($this->firstName));
-            $this->lastName =htmlspecialchars(strip_tags($this->lastName));
+            $this->username = htmlspecialchars(strip_tags($this->username));
+            $this->password = htmlspecialchars(strip_tags($this->password));
+            $this->firstName = htmlspecialchars(strip_tags($this->firstName));
+            $this->lastName = htmlspecialchars(strip_tags($this->lastName));
 
-            //$this->password=password_hash($this->password, PASSWORD_DEFAULT);
+            $this->password=password_hash($this->password, PASSWORD_DEFAULT);
 
-            //Bind data
             $stmt->bindParam(':username', $this->username);
             $stmt->bindParam(':password', $this->password);
             $stmt->bindParam(':firstName', $this->firstName);
             $stmt->bindParam(':lastName', $this->lastName);
 
-            //Executing query
             if($stmt->execute()){
                 return true;
             }
 
-            //Print error
             printf("Error: %s.\n", $stmt->error);
             return false;
     }
