@@ -3,6 +3,7 @@ body {
 }
 
 .fullpage-container {
+  height: 100vh;
   background-size: cover;
   background-image: url(../../img/icon-wallpaper.png);
   background-repeat: no-repeat;
