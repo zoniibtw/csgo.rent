@@ -14,26 +14,26 @@
 }
 
 .logo-type {
-  height: 35px;
+  height: 2vw;
   width: auto;
 }
 
 .logo-type > a {
-  font-size: 22px;
+  font-size: 1vw;
   font-weight: 700;
-  letter-spacing: 5px;
+  letter-spacing: 0.05vw;
 }
 
 .login-button {
-  width: 180px;
-  height: 35px;
+  width: 10vw;
+  height: 1.9vw;
   background-color: #7b2cbf;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.25vw;
   color: white;
   text-decoration: none;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.74vw;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.05vw;
 }
