@@ -1,7 +1,7 @@
 import './css/section-two.css';
 import Item from '../../img/budget.png';
 import Check from '../../img/icon-check.png'
-import {useEffect} from '../API/post';
+import {postData} from '../API/post';
 
 function SectionTwo() {
   return (
@@ -68,7 +68,7 @@ function SectionTwo() {
             </div>
           </div>
           <div className="item-button">
-            <button onClick={ () => this.useEffect() }>BÖRJA IDAG</button>
+            <button onClick={ () => this.postData() }>BÖRJA IDAG</button>
           </div>
           <div className="info-box">
             <ul className="info-container">
