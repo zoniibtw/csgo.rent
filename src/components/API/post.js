@@ -1,11 +1,35 @@
-export useEffect(() => {
+class Post extends App {
 
-const requestOptions = {
+    async postData() {
+
+    try {
+
+        let result = await fetch('https://csgo-rent-api-lrib5.ondigitalocean.app/API/User/createUser.php', {
             method: 'POST',
-            headers: { 'Content-type': 'application/json' },
-            body: JSON.stringify({ username: 'test', password: 'test', firstName: 'test', lastName: 'test' })
-            };
-            fetch('https://csgo-rent-api-lrib5.ondigitalocean.app/API/User/createUser.php', requestOptions)
-                .then(response => response.json())
-                .then(data => setUserId(data.id));
-}, []);
+            mode: 'no-cors',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: 'test',
+                password: 'test',
+                firstName: 'test',
+                lastName: 'test'
+            })
+
+        });
+
+        console.log(result)
+        return true;
+
+    } catch(e) {
+        console.log(e)
+        return false;
+    }
+
+}
+
+}
+
+export default Post;
