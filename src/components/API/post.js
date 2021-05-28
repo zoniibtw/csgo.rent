@@ -1,6 +1,4 @@
-class Post extends App {
-
-    async postData() {
+    export const postData = async () => {
 
     try {
 
@@ -31,5 +29,3 @@ class Post extends App {
 }
 
 }
-
-export default Post;
