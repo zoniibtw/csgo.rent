@@ -1,16 +1,15 @@
 import './css/section-two.css';
 import Item from '../../img/budget.png';
 import Check from '../../img/icon-check.png'
-import {postData} from '../API/post';
 
 function SectionTwo() {
   return (
     <div className="section-two">
       <div className="section-two-container">
         <h1>Vi erbjuder dessa abonnemang</h1>
-        <div className="subscription-container">
+        <div className="subscription-container grid-container">
 
-        <div className="sub-item">
+        <div className="sub-item grid-item">
           <div className="title-box">
             <h1>BUDGET</h1>
             <div className="border-container">
@@ -68,7 +67,7 @@ function SectionTwo() {
             </div>
           </div>
           <div className="item-button">
-            <button onClick={ () => this.postData() }>BÖRJA IDAG</button>
+            <button>BÖRJA IDAG</button>
           </div>
           <div className="info-box">
             <ul className="info-container">

@@ -76,23 +76,27 @@
 
 .instruction-icon {
   width: 100%;
-  height: 45px;
+  height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.money-icon > img {
-  height: 25px !important;
-  width: auto !important;
+.instruction-icon > img {
+  height: 4vh;
+  width: auto;
 }
 
-.instruction-icon > img {
-  height: 38px;
-  width: auto;
+.money-icon > img {
+  height: 3vh !important;
+  width: auto !important;
 }
 
 .item-text {
   min-width: auto;
   max-width: 14vw;
+}
+
+.item-text > p {
+  font-size: 0.8vw;
 }

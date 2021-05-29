@@ -13,7 +13,7 @@ function SectionThree() {
             <img src={Avatar}></img>
             <div className="management-info">
               <h3>Niklas Jörgensen</h3>
-              <p>Projekt Ledare</p>
+              <p>Delägare</p>
             </div>
           </div>
 
@@ -28,8 +28,8 @@ function SectionThree() {
           <div className="management-item">
             <img src={Avatar}></img>
             <div className="management-info">
-              <h3>Eric Jörgensen</h3>
-              <p>Redovisningsekonom</p>
+              <h3>Eric Locher</h3>
+              <p>Delägare</p>
             </div>
           </div>
         </div>

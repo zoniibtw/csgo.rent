@@ -1,7 +1,7 @@
 .section-three {
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5vh;
 }
 
 .about-us-container {
@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+.about-title > h1 {
+  font-size: 1.6vw;
+}
+
 .management-container {
   width: 35vw;
   display: flex;
@@ -22,19 +26,19 @@
 .management-item {
   align-items: center;
   text-align: center;
-  margin-top: 1.2rem;
+  margin-top: 2vh;
 }
 
 .management-item > img {
-  width: 8rem;
-  height: 8rem;
+  width: 7.5vw;
+  height: 7.5vw;
   border-radius: 100%;
 }
 
 .management-info > h3 {
-  font-size: 1.3rem;
+  font-size: 1.2vw;
 }
 
 .management-info > p {
-  font-size: 0.8rem;
+  font-size: 0.6vw;
 }
