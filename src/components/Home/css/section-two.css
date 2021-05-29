@@ -5,8 +5,8 @@
 }
 
 .section-two-container {
-  width: 80vw;
-  margin-top: 2.5rem;
+  width: 80%;
+  margin-top: 4vh;
 }
 
 .section-two-container > h1 {
@@ -58,7 +58,7 @@
 
 .border-box-two {
   background-color: #d2d2d2;
-  height: 0.2vh;
+  height: 0.1vh;
   width: 100%;
 }
 
@@ -66,7 +66,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.8vh;
 }
 
 .item-img > img {
@@ -131,12 +131,12 @@
 
   color: #7b2cbf;
   border: none;
-  border-radius: 6px;
-  border: solid 2px #7b2cbf;
+  border-radius: 0.5vh;
+  border: solid 0.35vh #7b2cbf;
   background-color: white;
   font-size: 1.65vh;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.2vh;
   cursor: pointer;
 }
 
@@ -144,7 +144,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 1.2rem;
+  margin-top: 2.2vh;
 }
 
 .standard > button {
@@ -153,69 +153,65 @@
 
   color: white;
   border: none;
-  border-radius: 6px;
-  border: solid 2px #7b2cbf;
+  border-radius: 0.5vh;
+  border: solid 0.35vh #7b2cbf;
   background-color: #7b2cbf;
   font-size: 1.65vh;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.2vh;
   cursor: pointer;
 }
 
 .info-box {
   display: flex;
   justify-content: center;
-  margin-top: 1.2rem;
-}
-
-.info-container {
-  width: 12vw;
+  margin-top: 2vh;
 }
 
 .info-item {
   list-style: none;
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 1vh;
   align-items: center;
 }
 
 .info-item > img {
-  height: 0.9rem;
+  height: 1.3vh;
   width: auto;
 }
 
 .info-item > p {
-  font-size: 0.75rem;
-  margin-left: 5px;
+  font-size: 1.35vh;
+  margin-left: 0.75vh;
   color: #444444;
 }
 
 .popular {
   background-color: #7b2cbf;
   width: 100%;
-  margin-top: 0.2rem;
+  margin-top: 0.3vh;
 }
 
 .popular > p {
   color: white;
-  font-size: 0.8rem;
+  font-size: 1.5vh;
   font-weight: 700;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 0.35vh;
+  padding-bottom: 0.35vh;
   text-align: center;
 }
 
 .price-worth {
   background-color: #7b2cbf;
   width: 100%;
-  margin-top: 0.2rem;
+  margin-top: 0.3vh;
 }
 
 .price-worth > p {
   color: white;
-  font-size: 0.8rem;
+  font-size: 1.5vh;
   font-weight: 700;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 0.35vh;
+  padding-bottom: 0.35vh;
   text-align: center;
 }
