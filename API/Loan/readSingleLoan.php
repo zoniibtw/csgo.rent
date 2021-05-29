@@ -18,7 +18,10 @@ $loan->readSingleLoan();
 $loan_arr = array(
     'loanID' => $loan->loanID,
     'userID' => $loan->userID,
-    'skinID' => $loan->skinID
+    'skinID' => $loan->skinID,
+    'startDate' => $loan->startDate,
+    'endDate' => $loan->endDate,
+    'expired' => $loan->expired
 );
 
 print_r(json_encode($loan_arr));

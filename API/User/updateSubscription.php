@@ -15,18 +15,15 @@ $user = new User($db);
 
 $data = json_decode(file_get_contents("php://input"));
 
-$user->username = $data->username;
-$user->password = $data->password;
-$user->firstName = $data->firstName;
-$user->lastName = $data->lastName;
+$user->subscription = $data->subscription;
 $user->userID = $data->userID;
 
-if($user->updateUser()){
+if($user->updateSubscription()){
     echo json_encode(
-        array('message' => 'User Updated')
+        array('message' => 'Subscription Updated')
     );
 }else{
     echo json_encode(
-        array('message' => 'User Not Updated')
+        array('message' => 'Subscription Not Updated')
     );
 }

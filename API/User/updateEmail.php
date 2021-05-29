@@ -5,29 +5,25 @@ header('Access-Control-Allow-Methods: PUT');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods,Authorization,X-Requested-With');
 
 include_once '../../config/Database.php';
-include_once '../../models/loan.php';
+include_once '../../models/user.php';
 
 
 $database = new Database();
 $db = $database->connect();
 
-$loan = new Loan($db);
+$user = new User($db);
 
 $data = json_decode(file_get_contents("php://input"));
 
-$loan->loanID = $data->loanID;
-$loan->userID = $data->userID;
-$loan->skinID = $data->skinID;
-$loan->startDate = $data->startDate;
-$loan->endDate = $data->endDate;
-$loan->expired = $data->expired;
+$user->email = $data->email;
+$user->userID = $data->userID;
 
-if($loan->updateLoan()){
+if($user->updateEmail()){
     echo json_encode(
-        array('message' => 'Loan Updated')
+        array('message' => 'Email Updated')
     );
 }else{
     echo json_encode(
-        array('message' => 'Loan Not Updated')
+        array('message' => 'Email Not Updated')
     );
 }

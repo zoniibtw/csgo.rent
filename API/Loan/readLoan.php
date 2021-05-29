@@ -24,9 +24,12 @@ if($num > 0){
         extract($row);
 
         $loan_item = array(
+            'loanID' => $loanID,
             'skinID' => $skinID,
             'userID' => $userID,
-            'loanID' => $loanID
+            'startDate' => $startDate,
+            'endDate' => $endDate,
+            'expired' => $expired
         );
 
         array_push($loan_arr['data'], $loan_item);

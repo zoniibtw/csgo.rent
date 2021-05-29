@@ -25,7 +25,13 @@ if($num > 0){
         extract($row);
 
         $user_item = array(
-            'username' => $username,
+            'firstName' => $firstName,
+            'middleName' => $middleName,
+            'lastName' => $lastName,
+            'tradeUrl' => $tradeUrl,
+            'subscription' => $subscription,
+            'email' => $email,
+            'personNummer' => $personNummer,
             'userID' => $userID
         );
 

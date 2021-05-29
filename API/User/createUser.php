@@ -15,10 +15,10 @@ $user = new User($db);
 
 $data = json_decode(file_get_contents("php://input"));
 
-$user->username = $data->username;
-$user->password = $data->password;
 $user->firstName = $data->firstName;
+$user->middleName = $data->middleName;
 $user->lastName = $data->lastName;
+$user->personNummer = $data->personNummer;
 
 	if($user->createUser()){
 		echo json_encode(

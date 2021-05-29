@@ -1,12 +1,13 @@
 <?php
 
-Class skins{
+Class skin{
 
     private $conn;
-    private $table = 'skins';
+    private $table = 'skin';
 
     public $skinID;
-    public $skinName;
+    public $name;
+    public $marketName;
 
     public function __construct($db){
         $this->conn = $db;
@@ -34,7 +35,8 @@ Class skins{
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $this->skinName = $row['skinName'];
+        $this->name = $row['name'];
+        $this->marketName = $row['marketName'];
         $this->skinID = $row['skinID'];
     }
 
@@ -42,17 +44,20 @@ Class skins{
 
                 $query = 'UPDATE ' . $this->table . '
                 SET
-                    skinName = :skinName
+                    name = :name,
+                    marketName = :marketName
                 WHERE
                     skinID = :skinID';
 
                     $stmt = $this->conn->prepare($query);
         
                     $this->skinID =htmlspecialchars(strip_tags($this->skinID));
-                    $this->skinName =htmlspecialchars(strip_tags($this->skinName));
+                    $this->marketName =htmlspecialchars(strip_tags($this->marketName));
+                    $this->name =htmlspecialchars(strip_tags($this->name));
 
                     $stmt->bindParam(':skinID', $this->skinID);
-                    $stmt->bindParam(':skinName', $this->skinName);
+                    $stmt->bindParam(':marketName', $this->marketName);
+                    $stmt->bindParam(':name', $this->name);
 
                     if($stmt->execute()){
                         return true;
@@ -66,13 +71,16 @@ Class skins{
 
         $query = 'INSERT INTO ' . $this->table . '
         SET
-            skinName = :skinName';
+            name = :name,
+            marketName = :marketName';
 
             $stmt = $this->conn->prepare($query);
 
-            $this->skinName = htmlspecialchars(strip_tags($this->skinName));
+            $this->name = htmlspecialchars(strip_tags($this->name));
+            $this->marketName = htmlspecialchars(strip_tags($this->marketName));
 
-            $stmt->bindParam(':skinName', $this->skinName);
+            $stmt->bindParam(':name', $this->name);
+            $stmt->bindParam(':marketName', $this->marketName);
             if($stmt->execute()){
                 return true;
             }

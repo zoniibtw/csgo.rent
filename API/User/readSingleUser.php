@@ -17,8 +17,13 @@ $user->read_single_user();
 
 $user_arr = array(
     'userID' => $user->userID,
-    'username' => $user->username,
-    'password' => $user->password
+    'firstName' => $user->firstName,
+    'middleName' => $user->middleName,
+    'lastName' => $user->lastName,
+    'tradeUrl' => $user->tradeUrl,
+    'subscription' => $user->subscription,
+    'personNummer' => $user->personNummer,
+    'email' => $user->email
 );
 
 print_r(json_encode($user_arr));

@@ -16,6 +16,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 $loan->skinID = $data->skinID;
 $loan->userID = $data->userID;
+$loan->endDate = $data->endDate;
 
 	if($user->createLoan()){
 		echo json_encode(

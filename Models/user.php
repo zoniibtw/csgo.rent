@@ -5,11 +5,14 @@ Class User{
     private $conn;
     private $table = 'user';
 
-    public $username;
-    public $password;
-    public $firstName;
-    public $lastName;
     public $userID;
+    public $firstName;
+    public $middleName;
+    public $lastName;
+    public $tradeUrl;
+    public $subscription;
+    public $personNummer;
+    public $email;
 
     public function __construct($db){
         $this->conn = $db;
@@ -38,37 +41,73 @@ Class User{
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
         $this->userID = $row['userID'];
-        $this->username = $row['username'];
-        $this->password = $row['password'];
         $this->firstName = $row['firstName'];
+        $this->middleName = $row['middleName'];
         $this->lastName = $row['lastName'];
+        $this->tradeUrl = $row['tradeUrl'];
+        $this->subscription = $row['subscription'];
+        $this->personNummer = $row['personNummer'];
+        $this->email = $row['email'];
 
     }
 
-            public function updateUser(){
+            public function updateTradeUrl(){
 
                 $query = 'UPDATE ' . $this->table . '
                 SET
-                    username = :username,
-                    password = :password,
-                    firstName = :firstName,
-                    lastName = :lastName
+                    tradeUrl = :tradeUrl
                 WHERE
                     userID = :userID';
 
                     $stmt = $this->conn->prepare($query);
         
-                    $this->username =htmlspecialchars(strip_tags($this->username));
-                    $this->password =htmlspecialchars(strip_tags($this->password));
-                    $this->firstName =htmlspecialchars(strip_tags($this->firstName));
-                    $this->lastName =htmlspecialchars(strip_tags($this->lastName));
-                    $this->userID =htmlspecialchars(strip_tags($this->userID));
+                    $this->tradeUrl =htmlspecialchars(strip_tags($this->tradeUrl));
 
-                    $stmt->bindParam(':username', $this->username);
-                    $stmt->bindParam(':password', $this->password);
-                    $stmt->bindParam(':firstName', $this->firstName);
-                    $stmt->bindParam(':lastName', $this->lastName);
-                    $stmt->bindParam(':userID', $this->userID);
+                    $stmt->bindParam(':tradeUrl', $this->tradeUrl);
+
+                    if($stmt->execute()){
+                        return true;
+                    }
+
+                    printf("Error: %s.\n", $stmt->error);
+                    return false;
+            }
+
+            public function updateEmail(){
+
+                $query = 'UPDATE ' . $this->table . '
+                SET
+                    email = :email
+                WHERE
+                    userID = :userID';
+
+                    $stmt = $this->conn->prepare($query);
+        
+                    $this->email =htmlspecialchars(strip_tags($this->email));
+
+                    $stmt->bindParam(':email', $this->email);
+
+                    if($stmt->execute()){
+                        return true;
+                    }
+
+                    printf("Error: %s.\n", $stmt->error);
+                    return false;
+            }
+
+            public function updateSubscription(){
+
+                $query = 'UPDATE ' . $this->table . '
+                SET
+                    subscription = :subscription
+                WHERE
+                    userID = :userID';
+
+                    $stmt = $this->conn->prepare($query);
+        
+                    $this->subscription =htmlspecialchars(strip_tags($this->subscription));
+
+                    $stmt->bindParam(':subscription', $this->subscription);
 
                     if($stmt->execute()){
                         return true;
@@ -82,24 +121,24 @@ Class User{
 
         $query = 'INSERT INTO ' . $this->table . '
         SET
-            username = :username,
-            password = :password,
             firstName = :firstName,
-            lastName = :lastName';
+            middleName = :middleName,
+            lastName = :lastName,
+            personNummer = :personNummer';
 
             $stmt = $this->conn->prepare($query);
 
-            $this->username = htmlspecialchars(strip_tags($this->username));
-            $this->password = htmlspecialchars(strip_tags($this->password));
             $this->firstName = htmlspecialchars(strip_tags($this->firstName));
+            $this->middleName = htmlspecialchars(strip_tags($this->middleName));
             $this->lastName = htmlspecialchars(strip_tags($this->lastName));
+            $this->personNummer = htmlspecialchars(strip_tags($this->personNummer));
 
-            $this->password=password_hash($this->password, PASSWORD_DEFAULT);
+            //$this->personNummer=password_hash($this->personNummer, PASSWORD_DEFAULT);
 
-            $stmt->bindParam(':username', $this->username);
-            $stmt->bindParam(':password', $this->password);
             $stmt->bindParam(':firstName', $this->firstName);
+            $stmt->bindParam(':middleName', $this->middleName);
             $stmt->bindParam(':lastName', $this->lastName);
+            $stmt->bindParam(':personNummer', $this->personNummer);
 
             if($stmt->execute()){
                 return true;

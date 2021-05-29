@@ -5,18 +5,19 @@ header('Access-Control-Allow-Methods: PUT');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods,Authorization,X-Requested-With');
 
 include_once '../../config/Database.php';
-include_once '../../models/skins.php';
+include_once '../../models/skin.php';
 
 
 $database = new Database();
 $db = $database->connect();
 
-$skin = new Skins($db);
+$skin = new Skin($db);
 
 $data = json_decode(file_get_contents("php://input"));
 
 $skin->skinID = $data->skinID;
-$skin->skinName = $data->skinName;
+$skin->name = $data->name;
+$skin->marketName = $data->marketName;
 
 if($skin->updateSkins()){
     echo json_encode(

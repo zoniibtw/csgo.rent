@@ -3,13 +3,13 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
 include_once '../../Config/Database.php';
-include_once '../../Models/skins.php';
+include_once '../../Models/skin.php';
 
 
 $database = new Database();
 $db = $database->connect();
 
-$skin = new Skins($db);
+$skin = new Skin($db);
 $result = $skin->readSkins();
 
 $num = $result->rowCount();
@@ -25,7 +25,8 @@ if($num > 0){
 
         $skin_item = array(
             'skinID' => $skinID,
-            'skinName' => $skinName
+            'name' => $name,
+            'marketName' => $marketName
         );
 
         array_push($skin_arr['data'], $skin_item);
