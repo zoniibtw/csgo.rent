@@ -1,4 +1,6 @@
 import './css/section-three.css';
+import Anton from '../../img/anton-persson2.jpg'
+import Eric from '../../img/eric-locher.png'
 import Avatar from '../../img/avatar.jpg'
 
 function SectionThree() {
