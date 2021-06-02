@@ -1,8 +1,9 @@
 .item {
   width: 24vh;
-  height: 28vh;
   background-color: white;
   border-radius: 0.6vh;
+  padding-top: 0.8vh;
+  padding-bottom: 1.8vh;
 }
 
 .item-header-container {
@@ -18,10 +19,12 @@
 .item-name {
   font-size: 1.29vh;
   font-weight: 800;
+  color: #4a4a4a;
 }
 
 .item-exterior {
   font-size: 1.1vh;
+  color: #4a4a4a;
 }
 
 .item-image-container {
@@ -44,12 +47,14 @@
 .item-price > h1 {
   font-size: 2vh;
   font-weight: 700;
+  color: #4a4a4a;
 }
 
 .button-container {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 0.8vh;
 }
 
 .button-container > button {
@@ -59,7 +64,7 @@
   color: white;
   border: none;
   border-radius: 0.5vh;
-  border: solid 0.35vh #7b2cbf;
+  border: solid 0.25vh #7b2cbf;
   background-color: #7b2cbf;
   font-size: 1.5vh;
   font-weight: 600;
@@ -71,6 +76,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 1vh;
 }
 
 .item-wear-pointer {
@@ -92,6 +98,8 @@
   font-size: 1vh;
   display: flex;
   justify-content: center;
+  color: #4a4a4a;
+  margin-bottom: 0.3vh;
 }
 
 .wear-bar-container {
