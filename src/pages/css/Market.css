@@ -6,7 +6,13 @@
 
 .items-container {
   width: 80%;
-  display: inline-flex;
-  flex-flow: wrap;
-  gap: 1vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16vh, 24vh));
+  grid-auto-rows: auto;
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.item {
+  grid-column: span 1;
 }
