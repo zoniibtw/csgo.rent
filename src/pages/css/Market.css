@@ -1,0 +1,12 @@
+.items-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.items-container {
+  width: 80%;
+  display: inline-flex;
+  flex-flow: wrap;
+  gap: 1vh;
+}
