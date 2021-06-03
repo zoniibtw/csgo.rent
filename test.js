@@ -1,15 +1,10 @@
-var io = require('socket.io-client');
-var socket = io.connect("http://localhost:3000/", {
-    reconnection: true
-});
+var item = { name: "test", float: 0.01};
+var item1 = { name: "test2", float: 0.2};
 
-socket.on('connect', function () {
-    console.log('connected to localhost:3000');
-    
-    socket.on('GET_INVENTORY', function() {
-        console.log("OK");
-        socket.emit('GET_INVENTORY_RETURN', "bliblo");
-    });
+var itemArray = new Array();
+itemArray.push(item, item1);
 
 
-});
+console.log(itemArray);
+console.log(itemArray[0].name)
+
