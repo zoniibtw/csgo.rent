@@ -6,6 +6,10 @@
   padding-bottom: 1.8vh;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .items-container{
   justify-content: center;
 }
