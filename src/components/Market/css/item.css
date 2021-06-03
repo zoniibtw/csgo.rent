@@ -1,9 +1,13 @@
 .item {
-  width: 24vh;
+  width: 100%;
   background-color: white;
   border-radius: 0.6vh;
   padding-top: 0.8vh;
   padding-bottom: 1.8vh;
+}
+
+.items-container{
+  justify-content: center;
 }
 
 .item-header-container {
