@@ -39,6 +39,15 @@ class App extends Component {
         return (
         <Router>
             <div className="App">
+                
+                <ul>
+                    {data.map(item => (
+                        <li key={item.id}>
+                            {item.name}
+                        </li>
+                    ))}
+                </ul>
+
                 <Switch>
                     <Route path="/market" component={Market} />
                     <Route path="/settings" component={Settings} />
