@@ -42,8 +42,8 @@ class App extends Component {
                 
                 <ul>
                     {data.map(item => (
-                        <li key={item.id}>
-                            {item.name}
+                        <li key={item.userID}>
+                            {item.firstName}
                         </li>
                     ))}
                 </ul>
