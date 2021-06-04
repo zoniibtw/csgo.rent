@@ -13,13 +13,9 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userID: 0,
-            firstName: '',
-            middleName: '',
-            lastName: '',
-            tradeUrl: '',
-            subscription: '',
-            personNummer: '',
+            id: 0,
+            market_name: '',
+            icon_url: '',
             data: [],
         }
     }
