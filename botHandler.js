@@ -15,15 +15,24 @@ var server = app.listen(3000, function(){
     var connectedClient = io.on('connection', function (socket) {
         console.log('connected:', socket.client.id);
 
-        app.get('/bot/inventory', (req, res) => {
-            socket.emit('GET_INVENTORY');
-            socket.on('GET_INVENTORY_RETURN', ret => {
-                console.log(ret);
-                res.send(ret);
-                res.end();
+        async function getInventory(){
+            return new Promise(resolve => {
+                var data;
+                socket.emit('GET_INVENTORY');
+                socket.on('GET_INVENTORY_RETURN', ret => {
+                    data = JSON.stringify(ret);
+                });
+                setTimeout(() => {
+                  resolve(data);
+                }, 2000);
             });
+        }
+        
+        app.get('/bot/inventory', async function (req, res) {
+            let response = await getInventory();
+            console.log(response);
+            return res.send(response);
         });
-
     });
 
 });

@@ -69,7 +69,7 @@ class Bot {
             });
             setTimeout(() => {
               resolve(data);
-            }, 2000);
+            }, 1000);
         });
     };
 
@@ -110,7 +110,7 @@ socket.on('connect', function () {
         let result = await bots[2].getInventory();
         
         socket.emit('GET_INVENTORY_RETURN', result);
-        
+        return;
     });
 
 });
