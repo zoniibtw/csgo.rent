@@ -9,6 +9,7 @@ const {
 
 const app = express();
 var server = app.listen(3000, function(){
+    console.log("Listening to port 3000.");
     var io = socket(server);
 
     var connectedClient = io.on('connection', function (socket) {
