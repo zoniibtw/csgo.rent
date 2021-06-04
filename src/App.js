@@ -24,27 +24,26 @@ class App extends Component {
         }
     }
     componentDidMount() {
-        fetch('http://161.35.208.132/bot/inventory')
+        fetch('https://csgo-rent-api-lrib5.ondigitalocean.app/API/User/readUser.php')
             .then(res => res.json())
             .then(json => {
-                const { id, market_name, icon_url, data} = json;
-                this.setState({ id, market_name, icon_url, data});
+                const { userID, firstName, middleName, lastName, tradeUrl, subscription, personNummer, data} = json;
+                this.setState({ userID, firstName, middleName, lastName, tradeUrl, subscription, personNummer, data});
             }).catch((err) => {
                 console.log(err);
             });
     } 
 
     render() {
-        const { id, market_name, icon_url, data } = this.state;
+        const { userID, firstName, middleName, lastName, tradeUrl, subscription, personNummer, data } = this.state;
         return (
         <Router>
             <div className="App">
                 
                 <ul>
                     {data.map(item => (
-                        <li key={item.id}>
-                            {item.market_name}
-                            <img src="https://community.cloudflare.steamstatic.com/economy/image/+{item.icon_url}" />
+                        <li key={item.userID}>
+                            {item.firstName}
                         </li>
                     ))}
                 </ul>
