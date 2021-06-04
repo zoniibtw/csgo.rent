@@ -9,7 +9,33 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component {
 
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            userID: 0,
+            firstName: '',
+            middleName: '',
+            lastName: '',
+            tradeUrl: '',
+            subscription: '',
+            personNummer: '',
+            data: [],
+        }
+    }
+    componentDidMount() {
+        fetch('https://csgo-rent-api-lrib5.ondigitalocean.app/API/User/readUser.php')
+            .then(res => res.json())
+            .then(json => {
+                const { userID, firstName, middleName, lastName, tradeUrl, subscription, personNummer, data} = json;
+                this.setState({ userID, firstName, middleName, lastName, tradeUrl, subscription, personNummer, data});
+            }).catch((err) => {
+                console.log(err);
+            });
+    } 
+
     render() {
+        const { userID, firstName, middleName, lastName, tradeUrl, subscription, personNummer, data } = this.state;
         return (
         <Router>
             <div className="App">
