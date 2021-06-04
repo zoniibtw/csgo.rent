@@ -10,5 +10,11 @@
         "password": "28IOOqUplNNb",
         "sharedSecret": "KBgG+cvIxUpGIRS8UOwUH4JcbQQ=",
         "identitySecret": "Jr9LdCOIVWQh1odgtcSyQZeRpH8="
+    },
+    "bot3": {
+        "username": "monsterboobies",
+        "password": "And1streetball",
+        "sharedSecret": "D9pOUwmFhmF2TynH3YRs+zkJSw4=",
+        "identitySecret": "Cj2vAW9ZcwHP2RCw6s2qAEER/0o="
     }
 }

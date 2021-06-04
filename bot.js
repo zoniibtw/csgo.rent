@@ -33,6 +33,7 @@ class Bot {
     }
 
     logOn() {
+        this.client.setOption("promptSteamGuardCode", false);
         this.client.logOn(this.logOnOptions);
 
         this.client.on('loggedOn', () => {
@@ -46,25 +47,42 @@ class Bot {
         });
     }
 
-    async getInventory() {
-        this.community.getUserInventoryContents(this.client.steamID, 730, 2, true, (err, inventory) => {
-
+    /*async getInventory() {
+        return this.community.getUserInventoryContents(this.client.steamID, 730, 2, true, (err, inventory) => {
             if (err) {
                 throw err;
             } else {
                 return inventory;
             }
         });
-    }
+    }*/
+
+    async getInventory(){
+        return new Promise(resolve => {
+            var data;
+            this.community.getUserInventoryContents(this.client.steamID, 730, 2, true, (err, inventory) =>{
+                if (err) {
+                    throw err;
+                } else {
+                    data = inventory;
+                }
+            });
+            setTimeout(() => {
+              resolve(data);
+            }, 2000);
+        });
+    };
 
 }
 
 var bots = new Array();
 bots.push(new Bot(config.bot1.username, config.bot1.password, config.bot1.sharedSecret, config.bot1.identitySecret));
 bots.push(new Bot(config.bot2.username, config.bot2.password, config.bot2.sharedSecret, config.bot2.identitySecret));
+bots.push(new Bot(config.bot3.username, config.bot3.password, config.bot3.sharedSecret, config.bot3.identitySecret));
 
 bots[0].logOn();
 bots[1].logOn();
+bots[2].logOn();
 
 
 /*function declineOffer(offer) {
@@ -88,11 +106,11 @@ var socket = io.connect("http://localhost:3000/", {
 socket.on('connect', function () {
     console.log('connected to localhost:3000');
 
-    socket.on('GET_INVENTORY', function () {
-        socket.emit('GET_INVENTORY_RETURN', bots[0].getInventory());
+    socket.on('GET_INVENTORY', async function () {
+        let result = await bots[2].getInventory();
+        
+        socket.emit('GET_INVENTORY_RETURN', result);
+        
     });
 
-
 });
-
-/* ---- */

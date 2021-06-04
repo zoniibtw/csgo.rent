@@ -17,6 +17,7 @@ var server = app.listen(3000, function(){
         app.get('/bot/inventory', (req, res) => {
             socket.emit('GET_INVENTORY');
             socket.on('GET_INVENTORY_RETURN', ret => {
+                console.log(ret);
                 res.send(ret);
                 res.end();
             });
