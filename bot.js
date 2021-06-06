@@ -29,7 +29,7 @@ class Bot {
             twoFactorCode: SteamTotp.generateAuthCode(secret)
         }
         this.identitySecret = identitySecret;
-
+        this.isLoggedOn = false;
     }
 
     logOn() {
@@ -38,6 +38,7 @@ class Bot {
 
         this.client.on('loggedOn', () => {
             console.log('Bot1 succesfully logged on.');
+            this.isLoggedOn = true;
         });
 
 
@@ -57,10 +58,10 @@ class Bot {
         });
     }*/
 
-    async getInventory(){
+    async getInventory() {
         return new Promise(resolve => {
             var data;
-            this.community.getUserInventoryContents(this.client.steamID, 730, 2, true, (err, inventory) =>{
+            this.community.getUserInventoryContents(this.client.steamID, 730, 2, true, (err, inventory) => {
                 if (err) {
                     throw err;
                 } else {
@@ -68,7 +69,7 @@ class Bot {
                 }
             });
             setTimeout(() => {
-              resolve(data);
+                resolve(data);
             }, 1000);
         });
     };
@@ -80,9 +81,20 @@ bots.push(new Bot(config.bot1.username, config.bot1.password, config.bot1.shared
 bots.push(new Bot(config.bot2.username, config.bot2.password, config.bot2.sharedSecret, config.bot2.identitySecret));
 bots.push(new Bot(config.bot3.username, config.bot3.password, config.bot3.sharedSecret, config.bot3.identitySecret));
 
-bots[0].logOn();
-bots[1].logOn();
-bots[2].logOn();
+bots.forEach(bot => {
+    bot.logOn();
+});
+connectToSocket();
+
+function checkBots() {
+
+    bots.forEach(bot => {
+        if (!bot.isLoggedOn) {
+            return false;
+        }
+    });
+    return true;
+}
 
 
 /*function declineOffer(offer) {
@@ -98,19 +110,30 @@ function createNewOffer(tradeUrl) {
 
 /* -- Websocket connection to botHandler using socket.io -- */
 
-var socket = io.connect("http://localhost:3000/", {
-    reconnection: true
-});
-
 //When connected construct API request. 
-socket.on('connect', function () {
-    console.log('connected to localhost:3000');
+function connectToSocket() {
 
-    socket.on('GET_INVENTORY', async function () {
-        let result = await bots[2].getInventory();
-        
-        socket.emit('GET_INVENTORY_RETURN', result);
-        return;
+    var socket = io.connect("http://localhost:3000/", {
+        reconnection: true
     });
 
-});
+    socket.on('connect', function () {
+        console.log('connected to localhost:3000');
+
+        socket.on('GET_INVENTORY', async function () {
+            let result = await bots[2].getInventory();
+
+            socket.emit('GET_INVENTORY_RETURN', result);
+            return;
+        });
+    });
+    setInterval(async function() {
+        let result = await bots[2].getInventory();
+        
+        //console.log(result);
+
+        socket.emit('UPDATE_INVENTORY', result);
+        return;
+    }, 60000)
+    
+}
