@@ -18,7 +18,9 @@ $skin->readSingleSkins();
 $skin_arr = array(
     'skinID' => $skin->skinID,
     'name' => $skin->name,
-    'marketName' => $skin->marketName
+    'market_name' => $skin->market_name,
+    'icon_url' => $skin->icon_url,
+    'link' => $skin->link
 );
 
 print_r(json_encode($skin_arr));

@@ -17,7 +17,9 @@ $data = json_decode(file_get_contents("php://input"));
 
 $skin->skinID = $data->skinID;
 $skin->name = $data->name;
-$skin->marketName = $data->marketName;
+$skin->market_name = $data->market_name;
+$skin->icon_url = $data->icon_url;
+$skin->link = $data->link;
 
 if($skin->updateSkins()){
     echo json_encode(

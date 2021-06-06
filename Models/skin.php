@@ -7,7 +7,9 @@ Class skin{
 
     public $skinID;
     public $name;
-    public $marketName;
+    public $market_name;
+    public $icon_url;
+    public $link;
 
     public function __construct($db){
         $this->conn = $db;
@@ -35,9 +37,11 @@ Class skin{
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $this->name = $row['name'];
-        $this->marketName = $row['marketName'];
         $this->skinID = $row['skinID'];
+        $this->name = $row['name'];
+        $this->market_name = $row['market_name'];
+        $this->icon_url = $row['icon_url'];
+        $this->link = $row['link'];
     }
 
             public function updateSkins(){
@@ -45,7 +49,9 @@ Class skin{
                 $query = 'UPDATE ' . $this->table . '
                 SET
                     name = :name,
-                    marketName = :marketName
+                    market_name = :market_name,
+                    icon_url = :icon_url,
+                    link = :link
                 WHERE
                     skinID = :skinID';
 
@@ -54,10 +60,14 @@ Class skin{
                     $this->skinID =htmlspecialchars(strip_tags($this->skinID));
                     $this->marketName =htmlspecialchars(strip_tags($this->marketName));
                     $this->name =htmlspecialchars(strip_tags($this->name));
+                    $this->icon_url =htmlspecialchars(strip_tags($this->icon_url));
+                    $this->link =htmlspecialchars(strip_tags($this->link));
 
                     $stmt->bindParam(':skinID', $this->skinID);
-                    $stmt->bindParam(':marketName', $this->marketName);
+                    $stmt->bindParam(':market_name', $this->market_name);
                     $stmt->bindParam(':name', $this->name);
+                    $stmt->bindParam(':icon_url', $this->icon_url);
+                    $stmt->bindParam(':link', $this->link);
 
                     if($stmt->execute()){
                         return true;
@@ -66,27 +76,5 @@ Class skin{
                     printf("Error: %s.\n", $stmt->error);
                     return false;
             }
-
-    public function createSkins(){
-
-        $query = 'INSERT INTO ' . $this->table . '
-        SET
-            name = :name,
-            marketName = :marketName';
-
-            $stmt = $this->conn->prepare($query);
-
-            $this->name = htmlspecialchars(strip_tags($this->name));
-            $this->marketName = htmlspecialchars(strip_tags($this->marketName));
-
-            $stmt->bindParam(':name', $this->name);
-            $stmt->bindParam(':marketName', $this->marketName);
-            if($stmt->execute()){
-                return true;
-            }
-
-            printf("Error: %s.\n", $stmt->error);
-            return false;
-    }
 }
 ?>

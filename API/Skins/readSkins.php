@@ -26,7 +26,9 @@ if($num > 0){
         $skin_item = array(
             'skinID' => $skinID,
             'name' => $name,
-            'marketName' => $marketName
+            'market_name' => $market_name,
+            'icon_url' => $icon_url,
+            'link' => $link
         );
 
         array_push($skin_arr['data'], $skin_item);
