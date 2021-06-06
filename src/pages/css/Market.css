@@ -5,7 +5,7 @@
 }
 
 .items-container {
-  width: 80%;
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16vh, 24vh));
   grid-auto-rows: auto;
