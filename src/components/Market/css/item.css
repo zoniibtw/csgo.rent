@@ -6,11 +6,11 @@
   padding-bottom: 1.8vh;
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
-.items-container{
+.items-container {
   justify-content: center;
 }
 
@@ -66,7 +66,8 @@ body{
 }
 
 .button-container > button {
-  width: 5.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
   height: 3vh;
 
   color: white;
