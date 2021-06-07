@@ -24,36 +24,19 @@ con.connect(function (err) {
         var io = socket(server);
 
         var connectedClient = io.on('connection', function (socket) {
+            //requirePrice();
             console.log('connected:', socket.client.id);
-
-            async function getInventory() {
-                return new Promise(resolve => {
-                    var data;
-                    socket.emit('GET_INVENTORY');
-                    socket.on('GET_INVENTORY_RETURN', ret => {
-                        data = JSON.stringify(ret);
-                    });
-                    setTimeout(() => {
-                        resolve(data);
-                    }, 2000);
-                });
-            }
-
-            app.get('/bot/inventory', async function (req, res) {
-                let response = await getInventory();
-                console.log(response);
-                return res.send(response);
-            });
 
             socket.on('UPDATE_INVENTORY', ret => { 
 
-                var sql = "INSERT INTO skin (skinID, market_name, name, icon_url, link) VALUES ";
+                console.log(ret);
+
+                var sql = "INSERT INTO skin (skinID, market_name, name, icon_url, link, steamID, price) VALUES ";
                 ret.forEach(item => {
-                    if(item.commodity) {return;}
                     if (item == ret[ret.length - 1]) {
-                        sql += "('" + item.id + "','" + item.market_name + "','" + item.name + "','" + item.icon_url + "','" + item.actions[0].link +"')";
+                        sql += "('" + item.id + "','" + item.market_name + "','" + item.name + "','" + item.icon_url + "','" + item.link + "','" + item.steamid + "','" + item.price + "')";
                     } else {
-                        sql += "('" + item.id + "','" + item.market_name + "','" + item.name + "','" + item.icon_url + "','" + item.actions[0].link +"'),";
+                        sql += "('" + item.id + "','" + item.market_name + "','" + item.name + "','" + item.icon_url + "','" + item.link + "','" + item.steamid + "','" + item.price + "'),";
                     } 
                 });
 
@@ -62,8 +45,11 @@ con.connect(function (err) {
                         if (err){
                             console.log("Error occured on insert items query.");
                             return;
+                        } else {
+                            console.log("Updated Inventory..");
+                            console.log("Database: '" + result + "'");
+                            requirePrice();
                         }
-                        console.log("Updated Inventory");
                     });
                 } catch (error) {
                     console.log(error);
@@ -71,9 +57,22 @@ con.connect(function (err) {
 
             });
 
+            function requirePrice(){
 
-
+                let sql = "SELECT * FROM skin";
+                let skins;
+    
+                con.query(sql, function (err, result) {
+                    if (err){
+                        console.log("Error occured on fetching items query.");
+                        return;
+                    } else {
+                        console.log("Retrieved Items...");
+                        socket.emit('UPDATE_PRICES', result);
+                    }
+                })
+            
+            }
         });
-
     });
 });
