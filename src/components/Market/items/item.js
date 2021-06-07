@@ -1,18 +1,49 @@
 import '../css/item.css';
-import bfk from '../../../img/bfk-tt.png';
+import React, { useEffect, useState } from 'react';
 
 function Item() {
+
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState();
+
+  useEffect(() => {
+    setLoading(true);
+    fetch('https://csgo-rent-api-lrib5.ondigitalocean.app/API/Skins/readSkins.php')
+    .then((res) => res.json())
+    .then((data) => {
+      setData(data.data);
+    })
+    .catch((err) => {
+      setError(err);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) {
+    return <p>Data is loading...</p>;
+  }
+
+  if (error || !Array.isArray(data)) {
+    return <p>There was an error loading your data!</p>;
+  }
+
+
   return (
+    <div>
+    {data.map((item) => (
     <div className="item">
       <div className="item-header-container">
         <div className="item-info">
-          <p className="item-name">Moto Gloves | 3rd Commando</p>
+          <p className="item-name" key={item.skinID}>{item.name}</p>
           <p className="item-exterior">Minimal Wear</p>
         </div>
       </div>
       <div className="item-image-container">
-        <div className="item-image">
-          <img src={bfk}/>
+        <div className="item-image" key={item.skinID}>
+        <img src={"https://community.cloudflare.steamstatic.com/economy/image/" + item.icon_url}/>
         </div>
       </div>
       <div className="item-price-container">
@@ -43,7 +74,8 @@ function Item() {
         </div>
       </div>
     </div>
+    ))}
+    </div>
   );
 }
-
 export default Item;

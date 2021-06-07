@@ -10,9 +10,9 @@ function Footer() {
       <div className="footer-container">
         <div className="social-media">
           <div className="social-media-container">
-            <a href="https://twitter.com/csgo_rent" target="_blank"><img src={Twitter}></img></a>
-            <a href="https://www.facebook.com/" target="_blank"><img src={Facebook}></img></a>
-            <a href="https://www.instagram.com/" target="_blank"><img src={Instagram}></img></a>
+            <a href="https://twitter.com/csgo_rent" target="_blank" rel="noreferrer"><img src={Twitter} alt=""></img></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><img src={Facebook} alt=""></img></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><img src={Instagram} alt=""></img></a>
           </div>
         </div>
 
