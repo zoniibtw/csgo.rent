@@ -12,16 +12,6 @@ function Market() {
         <div className="items-section">
           <div className="items-container" >
             <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
           </div>
         </div>
 

@@ -15,4 +15,9 @@
 
 .item {
   grid-column: span 1;
+  margin-bottom: 10px;
+}
+
+.cont {
+  width: 100%;
 }

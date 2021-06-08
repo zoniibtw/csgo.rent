@@ -30,19 +30,18 @@ function Item() {
     return <p>There was an error loading your data!</p>;
   }
 
-
   return (
-    <div>
-    {data.map((item) => (
+    <container className="cont">
+    {data.map((item, i) => (
     <div className="item">
       <div className="item-header-container">
         <div className="item-info">
-          <p className="item-name" key={item.skinID}>{item.name}</p>
+          <p className="item-name" key={i}>{item.name}</p>
           <p className="item-exterior">Minimal Wear</p>
         </div>
       </div>
       <div className="item-image-container">
-        <div className="item-image" key={item.skinID}>
+        <div className="item-image" key={i}>
         <img src={"https://community.cloudflare.steamstatic.com/economy/image/" + item.icon_url}/>
         </div>
       </div>
@@ -75,7 +74,7 @@ function Item() {
       </div>
     </div>
     ))}
-    </div>
+    </container>
   );
 }
 export default Item;
