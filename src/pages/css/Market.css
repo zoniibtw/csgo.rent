@@ -1,21 +1,17 @@
 .items-section {
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .items-container {
-  width: 90%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16vh, 24vh));
-  grid-auto-rows: auto;
-  grid-gap: 10px;
-  grid-auto-flow: dense;
+  width: 68vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .item {
-  grid-column: span 1;
-  margin-bottom: 10px;
+  width: 15vw;
+  float: left;
+  margin: 1vw;
 }
 
 .cont {
