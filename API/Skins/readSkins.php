@@ -28,7 +28,8 @@ if($num > 0){
             'name' => $name,
             'market_name' => $market_name,
             'icon_url' => $icon_url,
-            'link' => $link
+            'link' => $link,
+            'price' => $price
         );
 
         array_push($skin_arr['data'], $skin_item);

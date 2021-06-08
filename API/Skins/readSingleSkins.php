@@ -20,7 +20,8 @@ $skin_arr = array(
     'name' => $skin->name,
     'market_name' => $skin->market_name,
     'icon_url' => $skin->icon_url,
-    'link' => $skin->link
+    'link' => $skin->link,
+    'price' => $skin->price
 );
 
 print_r(json_encode($skin_arr));

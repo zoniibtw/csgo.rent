@@ -10,6 +10,7 @@ Class skin{
     public $market_name;
     public $icon_url;
     public $link;
+    public $price;
 
     public function __construct($db){
         $this->conn = $db;
@@ -42,6 +43,7 @@ Class skin{
         $this->market_name = $row['market_name'];
         $this->icon_url = $row['icon_url'];
         $this->link = $row['link'];
+        $this->price = $row['price'];
     }
 
             public function updateSkins(){
@@ -51,7 +53,8 @@ Class skin{
                     name = :name,
                     market_name = :market_name,
                     icon_url = :icon_url,
-                    link = :link
+                    link = :link,
+                    price = :price
                 WHERE
                     skinID = :skinID';
 
@@ -62,12 +65,14 @@ Class skin{
                     $this->name =htmlspecialchars(strip_tags($this->name));
                     $this->icon_url =htmlspecialchars(strip_tags($this->icon_url));
                     $this->link =htmlspecialchars(strip_tags($this->link));
+                    $this->price =htmlspecialchars(strip_tags($this->price));
 
                     $stmt->bindParam(':skinID', $this->skinID);
                     $stmt->bindParam(':market_name', $this->market_name);
                     $stmt->bindParam(':name', $this->name);
                     $stmt->bindParam(':icon_url', $this->icon_url);
                     $stmt->bindParam(':link', $this->link);
+                    $stmt->bindParam(':price', $this->price);
 
                     if($stmt->execute()){
                         return true;

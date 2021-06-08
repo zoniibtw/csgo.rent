@@ -20,6 +20,7 @@ $skin->name = $data->name;
 $skin->market_name = $data->market_name;
 $skin->icon_url = $data->icon_url;
 $skin->link = $data->link;
+$skin->price = $data->price;
 
 if($skin->updateSkins()){
     echo json_encode(
