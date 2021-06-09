@@ -1,4 +1,56 @@
+.disable {
+  visibility: hidden;
+}
+
+.Settings {
+  width: 100%;
+}
+
 .settings-page {
   width: 100%;
-  height: 100vh;
+  justify-content: center;
+  display: flex;
+}
+
+.left-navbar {
+  width: 10vw;
+  background-color: white;
+}
+
+.left-navbar > ul {
+  list-style: none;
+}
+
+.settings-page-container {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.settings-container {
+  width: 75%;
+  height: 100%;
+}
+
+.row-system-one {
+  width: 100%;
+  height: auto;
+}
+
+.row-system-two {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.first-row-section {
+  width: 100%;
+  height: 100%;
+}
+
+.second-row-section {
+  width: 100%;
+  height: 100%;
 }
