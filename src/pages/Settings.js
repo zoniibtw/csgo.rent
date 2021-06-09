@@ -5,7 +5,19 @@ import './css/Settings.css';
 
 function Settings() {
   return (
-        <Header />
+    <div className="Settings">
+      <Header />
+      <div className="left-navbar">
+        <ul>
+          <li><img /><p></p></li>
+          <li><img /><p></p></li>
+          <li><img /><p></p></li>
+        </ul>
+      </div>
+      <div className="settings-overall">
+        <div className=""></div>
+      </div>
+    </div>
   );
 }
 

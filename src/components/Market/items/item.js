@@ -47,7 +47,7 @@ function Item() {
       </div>
       <div className="item-price-container">
         <div className="item-price">
-          <h1 key={item.skinID}>{item.price}</h1>
+          <h1 key={item.skinID}>{item.price} $</h1>
         </div>
       </div>
       <div className="button-container">

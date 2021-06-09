@@ -5,10 +5,6 @@
   padding-bottom: 1.8vh;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .items-container {
   justify-content: center;
 }
@@ -38,6 +34,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 1vh;
 }
 
 .item-image > img {
