@@ -91,10 +91,6 @@
   padding-bottom: 4px;
 }
 
-.item-wear-pointer-icon {
-  text-align: center; /*bullshit code, just remove this line (line.84)*/
-}
-
 .item-wear {
   width: 100%;
 }
