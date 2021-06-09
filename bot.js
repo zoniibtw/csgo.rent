@@ -171,31 +171,32 @@ function connectToSocket() {
             });
 
             if(trimmedJSON.length > 0){
-
-                for(let item of trimmedJSON){
-                    
-                    await bots[0].getItemPrice(item.market_name).then((value) => {
-                        if(value == "error") {
-                            price = null;
-                        }
-                        else {
-                            console.log(value);
-                            item.price = value;
-                        }
-                    });
-
-                }
-
                 //console.log(trimmedJSON);
                 trimmedJSON.forEach(item => {
                     result.push(item);
                 });
             }
         }
-        socket.emit('UPDATE_INVENTORY', result);
-        console.log("Sent inventory!");
 
-        return;
+        let unresolved = new Array();
+        for(let item of result){
+            unresolved.push(bots[0].getItemPrice(item.market_name).then((value) => {
+                if(value == "error") {
+                    price = null;
+                }
+                else {
+                    console.log(value);
+                    item.price = value;
+                }
+            }));
+        }
+
+        Promise.all(unresolved).then(() => {
+            socket.emit('UPDATE_INVENTORY', result);
+            console.log("Sent inventory!");
+            return;
+        });
+
     };
 
     socket.on('UPDATE_PRICES', (ret) => {
