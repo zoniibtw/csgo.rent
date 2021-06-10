@@ -47,9 +47,6 @@ function Settings() {
                     <div className="sub-info-container">
                       <p>Du har inga aktiva prenumerationer. Du kan lära dig mer om prenumerationen i Home sidan.</p>
                     </div>
-                    <div class="sub-under-info-container">
-                      <p>Nu kan du prova fem dagar fri period.</p>
-                    </div>
                     <div className="sub-button-container">
                       <button>PROVA NU</button>
                     </div>

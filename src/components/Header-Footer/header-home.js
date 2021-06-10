@@ -10,9 +10,9 @@ class HeaderHome extends React.Component {
     super();
     this.state = {
       showPopup: false
-    };
+    }
   }
-  
+
   togglePopup() {
     this.setState({
       showPopup: !this.state.showPopup
