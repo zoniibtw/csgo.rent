@@ -1,5 +1,4 @@
 import './css/header-home.css';
-//import logo, { ReactComponent } from '../../img/logo.svg';
 import Popup from '../../Popup';
 import './css/popup.css';
 import React, { Component } from 'react';
@@ -10,9 +9,9 @@ class HeaderHome extends React.Component {
     super();
     this.state = {
       showPopup: false
-    }
+    };
   }
-
+  
   togglePopup() {
     this.setState({
       showPopup: !this.state.showPopup

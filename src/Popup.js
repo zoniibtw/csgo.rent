@@ -4,7 +4,7 @@ class Popup extends React.Component {
 
     render() {
       return (
-        <div name="popup" className="popup" id="popup">
+        <div className="popup">
           <div className="popup-bg" onClick={this.props.closePopup}></div>
           <div className="popup_inner">
             <div className="popup-title">
