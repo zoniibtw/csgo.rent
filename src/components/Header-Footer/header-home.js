@@ -1,6 +1,6 @@
 import './css/header-home.css';
 import Login from '../pop-up/login-popup'
-import './css/popup.css';
+import '../pop-up/css/popup.css';
 import React, { Component } from 'react';
 
 class HeaderHome extends React.Component {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './css/login.css';
 
 class Popup extends React.Component {
 
@@ -12,9 +13,9 @@ class Popup extends React.Component {
               <button className="popup-exit" onClick={this.props.closePopup}>X</button>
             </div>
             <div className="popup-container">
-              <input className="input-id"></input>
-              <button className="login-btn">Logga in</button>
-              <button className="register-btn">Registrera</button>
+              <input className="input-id popup-item"></input>
+              <button className="login-btn popup-item">Logga in</button>
+              <button className="register-btn popup-item">Registrera</button>
             </div>
             <div className="popup-information">
               <a>Information</a>
