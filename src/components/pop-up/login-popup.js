@@ -13,7 +13,7 @@ class Popup extends React.Component {
               <button className="popup-exit" onClick={this.props.closePopup}>X</button>
             </div>
             <div className="popup-container">
-              <input className="input-id popup-item"></input>
+              <input className="popup-item" placeholder="Skriv ditt personnummer här!" type="number"></input>
               <button className="login-btn popup-item">Logga in</button>
               <button className="register-btn popup-item">Registrera</button>
             </div>
