@@ -1,5 +1,5 @@
 import './css/header-home.css';
-import Popup from '../../Popup';
+import Login from '../pop-up/login-popup'
 import './css/popup.css';
 import React, { Component } from 'react';
 
@@ -27,7 +27,7 @@ class HeaderHome extends React.Component {
         </div>
         <div className="log-in">
         <button onClick={this.togglePopup.bind(this)} className="login-button">Logga in med BankID</button>
-          {this.state.showPopup ? <Popup text='Close Me' closePopup = {this.togglePopup.bind(this)} /> : null}
+          {this.state.showPopup ? <Login text='Close Me' closePopup = {this.togglePopup.bind(this)} /> : null}
         </div>
       </div>
     </div>

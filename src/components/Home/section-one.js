@@ -4,9 +4,25 @@ import Arrows from '../../img/icon-arrows.png';
 import Happy from '../../img/icon-satisfied.png';
 import Contract from '../../img/icon-contract.png';
 import Money from '../../img/icon-money.png';
+import Register from '../pop-up/register-popup'
 
-function SectionOne() {
-  return (
+class SectionOne extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      showPopup: false
+    };
+  }
+  
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
+
+  render () {
+    return (
     <div className="section-one">
       <div className="description-container">
         <div className="description-login">
@@ -15,7 +31,8 @@ function SectionOne() {
             <p>Vi erbjuder en tjänst där du som användare slipper att spendera eller investera stora summor pengar för att kunna använda dig av skins. Istället betalar du varje månad en bestämd summa för att kunna ta ut det skin du vill spela med. </p>
           </div>
           <div className="login">
-            <button>Prova nu med BankID</button>
+            <button onClick={this.togglePopup.bind(this)} className="login-button">Prova nu med BankID</button>
+            {this.state.showPopup ? <Register text='Close Me' closePopup = {this.togglePopup.bind(this)} /> : null}
           </div>
         </div>
       </div>
@@ -56,6 +73,9 @@ function SectionOne() {
       </div>
     </div>
   );
+
+  }
+
 }
 
 export default SectionOne;
