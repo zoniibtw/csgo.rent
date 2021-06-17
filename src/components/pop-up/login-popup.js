@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './css/login.css';
+import './css/popup.css';
 import Cookies from "js-cookie";
 
 class Popup extends React.Component {
@@ -55,9 +56,11 @@ class Popup extends React.Component {
         <div className="popup">
           <div className="popup-bg" onClick={this.props.closePopup}></div>
           <div className="popup_inner">
+            <div className="exit-btn">
+              <button onClick={this.props.closePopup}>&#10006;</button>
+            </div>
             <div className="popup-title">
-              <h1>Logga in</h1>
-              <button className="popup-exit" onClick={this.props.closePopup}>X</button>
+              <h1>LOGGA IN</h1>
             </div>
             <div className="popup-container">
               <input className="popup-item" placeholder="Skriv ditt personnummer här!" type="number" onChange={this.handleChange}></input>

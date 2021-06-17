@@ -50,11 +50,11 @@ body,
 }
 
 .popup-title {
-  display: flex;
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+}
+
+.popup-title h1 {
+  text-align: center;
 }
 
 .popup-container {
