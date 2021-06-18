@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import './css/login.css';
 import './css/popup.css';
 import Cookies from "js-cookie";
 
@@ -56,20 +55,30 @@ class Popup extends React.Component {
         <div className="popup">
           <div className="popup-bg" onClick={this.props.closePopup}></div>
           <div className="popup_inner">
-            <div className="exit-btn">
-              <button onClick={this.props.closePopup}>&#10006;</button>
+
+            <div className="title-bar">
+                <h1>Logga in</h1>
             </div>
-            <div className="popup-title">
-              <h1>LOGGA IN</h1>
-            </div>
-            <div className="popup-container">
-              <input className="popup-item" placeholder="Skriv ditt personnummer här!" type="number" onChange={this.handleChange}></input>
-              <button className="login-btn popup-item" onClick={this.handleSubmit}>Logga in</button>
-              <button className="register-btn popup-item">Registrera</button>
-            </div>
-            <div className="popup-information">
-              <a>Information</a>
-              <a>EULA</a>
+
+            <div className="form-container-flex">
+              <div className="form-container">
+                <div className="input-container">
+                  <input placeholder="ÅÅÅÅMMDDNNNN" type="number" maxlength="10" aria-required="true" aria-invalid="true"></input>
+                </div>
+                <div className="button-container-login">
+                  <button className="login-btn" onClick={this.handleSubmit}>Logga in med BankID</button>
+                </div>
+                <div className=""></div>
+                <div className="button-container-register">
+                  <button className="register-btn">Registrera</button>
+                </div>
+                <div className="overall-information">
+                  <div className="a-container">
+                  <a>Information</a>
+                  <a>EULA</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -6,3 +6,13 @@
 #app {
   background-color: #ececec;
 }
+
+.input-error {
+  background-color: rgba(237, 28, 36, 0.1);
+  border: 1px solid #ed1c24;
+}
+
+.input-accepted {
+  background-color: rgba(28, 237, 38, 0.1);
+  border: 1px solid #1ced3f;
+}

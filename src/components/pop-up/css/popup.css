@@ -13,6 +13,12 @@ body,
   height: 10vh;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .popup {
   position: fixed;
   width: 100%;
@@ -42,52 +48,96 @@ body,
   left: 40%;
   right: 40%;
   top: 32%;
-  bottom: 32%;
+  bottom: 40%;
   margin: auto;
   background: white;
   z-index: 99;
   border-radius: 1vh;
 }
 
-.popup-title {
+.login-btn {
   width: 100%;
+  height: 2vw;
+  background-color: #7b2cbf;
+  border: none;
+  border-radius: 0.25vw;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.74vw;
+  font-weight: 600;
+  letter-spacing: 0.05vw;
 }
 
-.popup-title h1 {
-  text-align: center;
+.register-btn {
+  width: 100%;
+  height: 2vw;
+  background-color: white;
+  border: solid 0.2vh #7b2cbf;
+  border-radius: 0.25vw;
+  color: #7b2cbf;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.74vw;
+  font-weight: 600;
+  letter-spacing: 0.05vw;
 }
 
-.popup-container {
+.title-bar {
+  height: 20%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1vh;
+}
+
+.title-bar h1 {
+  font-size: 2vh;
+  align-items: center;
+}
+
+.form-container-flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
   width: 80%;
-  margin: 0 auto;
 }
 
-.popup-item {
+.input-container input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 2vw;
+  margin-bottom: 0.8vh;
+  border: solid rgb(141, 141, 141) 1.5px;
+  border-radius: 0.25vw;
+  padding-left: 10px;
+}
+
+.button-container-login {
+  margin-bottom: 0.5vh;
   width: 100%;
 }
 
-.fadeIn {
-  animation: fade-in 1000ms linear;
+.button-container-register {
+  margin-bottom: 0.5vh;
+  width: 100%;
 }
 
-.fadeOut {
-  animation: fade-out 1000ms linear;
+.overall-information {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.a-container {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes fade-out {
-  100% {
-    opacity: 1;
-  }
-  0% {
-    opacity: 0;
-  }
+.a-container a {
+  font-size: 1.2vh;
 }
