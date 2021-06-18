@@ -30,8 +30,8 @@ function Settings() {
                     <h1>Prenumeration</h1>
                   </div>
                   <div className="subscription">
-                    <p className="first-sub-text">Du har inga aktiva prenumerationer. Du kan lära dig mer om prenumerationen i Prime sida.</p>
-                    <p className="second-sub-text">Nu kan du prova fem dagar fri period.</p>
+                    <p className="first-sub-text">Du har inga aktiva prenumerationer. Du kan välja en prenumeration som passar dig under csgo.rent/plans.</p>
+                    <p className="second-sub-text">Nu kan du prova en 7 dagar fri period.</p>
                   </div>
                   <div className="sub-button-container">
                     <button>PROVA NU</button>
