@@ -9,7 +9,7 @@ function SectionTwo() {
         <h1>Vi erbjuder dessa abonnemang</h1>
         <div className="subscription-container grid-container">
 
-        <div className="sub-item grid-item">
+        <div className="sub-item">
           <div className="title-box">
             <h1>BUDGET</h1>
             <div className="border-container">

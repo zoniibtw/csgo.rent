@@ -10,9 +10,9 @@ function Settings() {
       <div className="settings-page">
         <div className="settings-container">
           <div className="setting-nav">
-            <a><svg></svg>Personlig info</a>
-            <a><svg></svg>Historik</a>
-            <a><svg></svg>Säkerhet</a>
+            <a>Personlig info</a>
+            <a>Historik</a>
+            <a>Säkerhet</a>
           </div>
           <div className="settings-overall">
             <div className="settings-overall-container">
@@ -23,6 +23,23 @@ function Settings() {
                 <div className="grid-item profile">
                   <div className="profile-container">
                     <h1>Profil</h1>
+                  </div>
+                  <div className="profile">
+                    <div className="profile-container inf-container">
+                      <img></img>
+                      <a>Anton Persson Somoza</a>
+                    </div>
+                    <div className="information-container">
+                      <div className="citizens-container inf-container">
+                        <p>Personnummer:</p><input></input>
+                      </div>
+                      <div className="register-date-container inf-container">
+                        <p>Registerings datum:</p><a>2021-06-08</a>
+                      </div>
+                      <div className="total-loan-container inf-container">
+                        <p>Totala lån:</p><a>5</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="grid-item sub">
@@ -40,6 +57,19 @@ function Settings() {
                 <div className="grid-item info">
                   <div className="info-container">
                     <h1>Allmän information</h1>
+                    <div className="info">
+                      <div className="trade-url inf-container">
+                        <div className="trade-url-item inf-container">
+                          <p>Trade-URL:</p><input></input>
+                        </div>
+                        <div className="trade-btns inf-container">
+                          <a>Få länken</a><a>Ange</a>
+                        </div>
+                      </div>
+                      <div className="steam-info inf-container">
+                        <p>Steam ID64:</p><a>76561199159859756</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
