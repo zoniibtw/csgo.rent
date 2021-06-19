@@ -13,6 +13,7 @@ Class User{
     public $subscription;
     public $personNummer;
     public $email;
+    public $apiKey;
 
     public function __construct($db){
         $this->conn = $db;
@@ -118,13 +119,23 @@ Class User{
             }
 
     public function createUser(){
+        function RandomString()
+        {
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $randstring = '';
+            for ($i = 0; $i < 20; $i++) {
+                $randstring = $randstring.$characters[rand(0, strlen($characters)-1)];
+            }
+            return $randstring;
+        }
 
         $query = 'INSERT INTO ' . $this->table . '
         SET
             firstName = :firstName,
             middleName = :middleName,
             lastName = :lastName,
-            personNummer = :personNummer';
+            personNummer = :personNummer,
+            apiKey = :apiKey';
 
             $stmt = $this->conn->prepare($query);
 
@@ -133,12 +144,11 @@ Class User{
             $this->lastName = htmlspecialchars(strip_tags($this->lastName));
             $this->personNummer = htmlspecialchars(strip_tags($this->personNummer));
 
-            //$this->personNummer=password_hash($this->personNummer, PASSWORD_DEFAULT);
-
             $stmt->bindParam(':firstName', $this->firstName);
             $stmt->bindParam(':middleName', $this->middleName);
             $stmt->bindParam(':lastName', $this->lastName);
             $stmt->bindParam(':personNummer', $this->personNummer);
+            $stmt->bindParam(':apiKey', RandomString());
 
             if($stmt->execute()){
                 return true;
