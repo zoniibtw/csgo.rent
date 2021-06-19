@@ -162,7 +162,7 @@ Class User {
 
     public function createUser() {
         // Create query
-        $query = 'INSERT INTO ' . $this->table . ' SET firstName = :firstName, middleName = :middleName, lastName = :lastName, personNummer = :personNummer';
+        $query = "INSERT INTO user (firstName, middleName, lastName, personNummer) VALUES (:firstName, :middleName, :lastName, :personNummer)";
 
         // Prepare statement
         $stmt = $this->conn->prepare($query);
