@@ -3,6 +3,8 @@
   background-size: cover;
   background-image: url(../../img/icon-wallpaper.png);
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .section-one-container {
