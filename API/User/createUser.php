@@ -7,6 +7,7 @@ header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
 include_once '../../Config/Database.php';
 include_once '../../Models/user.php';
+require_once '../authentication/auth.php';
 
 $database = new Database();
 $db = $database->connect();

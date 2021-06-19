@@ -119,7 +119,7 @@ Class User{
             }
 
     public function createUser(){
-        function RandomString()
+        /*function RandomString()
         {
             $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
             $randstring = '';
@@ -127,15 +127,15 @@ Class User{
                 $randstring = $randstring.$characters[rand(0, strlen($characters)-1)];
             }
             return $randstring;
-        }
+        }*/
 
         $query = 'INSERT INTO ' . $this->table . '
         SET
             firstName = :firstName,
             middleName = :middleName,
             lastName = :lastName,
-            personNummer = :personNummer,
-            apiKey = :apiKey';
+            personNummer = :personNummer';
+            //apiKey = :apiKey';
 
             $stmt = $this->conn->prepare($query);
 
@@ -148,7 +148,7 @@ Class User{
             $stmt->bindParam(':middleName', $this->middleName);
             $stmt->bindParam(':lastName', $this->lastName);
             $stmt->bindParam(':personNummer', $this->personNummer);
-            $stmt->bindParam(':apiKey', RandomString());
+            //$stmt->bindParam(':apiKey', RandomString());
 
             if($stmt->execute()){
                 return true;
