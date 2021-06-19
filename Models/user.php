@@ -139,10 +139,10 @@ Class User{
 
             $stmt = $this->conn->prepare($query);
 
-            $this->firstName = htmlspecialchars(strip_tags($this->firstName));
-            $this->middleName = htmlspecialchars(strip_tags($this->middleName));
-            $this->lastName = htmlspecialchars(strip_tags($this->lastName));
-            $this->personNummer = htmlspecialchars(strip_tags($this->personNummer));
+            $this->firstName =htmlspecialchars(strip_tags($this->firstName));
+            $this->middleName =htmlspecialchars(strip_tags($this->middleName));
+            $this->lastName =htmlspecialchars(strip_tags($this->lastName));
+            $this->personNummer =htmlspecialchars(strip_tags($this->personNummer));
 
             $stmt->bindParam(':firstName', $this->firstName);
             $stmt->bindParam(':middleName', $this->middleName);
@@ -150,12 +150,16 @@ Class User{
             $stmt->bindParam(':personNummer', $this->personNummer);
             //$stmt->bindParam(':apiKey', RandomString());
 
+            echo "got shit done";
+            //Executing query
             if($stmt->execute()){
                 return true;
             }
 
+            //Print error
             printf("Error: %s.\n", $stmt->error);
             return false;
     }
+    
 }
 ?>

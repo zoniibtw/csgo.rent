@@ -4,8 +4,8 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods,Authorization,X-Requested-With');
 
-include_once 'Config/Database.php';
-include_once 'Models/loan.php';
+include_once '../../Config/Database.php';
+include_once '../../Models/loan.php';
 
 $database = new Database();
 $db = $database->connect();
