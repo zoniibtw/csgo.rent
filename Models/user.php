@@ -118,8 +118,8 @@ Class User {
                     return false;
             }
 
-    public function createUser(){
-        /*function RandomString()
+    /*public function createUser(){
+        function RandomString()
         {
             $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
             $randstring = '';
@@ -127,15 +127,15 @@ Class User {
                 $randstring = $randstring.$characters[rand(0, strlen($characters)-1)];
             }
             return $randstring;
-        }*/
+        }
 
         $query = 'INSERT INTO ' . $this->table . '
         SET
             firstName = :firstName,
             middleName = :middleName,
             lastName = :lastName,
-            personNummer = :personNummer';
-            //apiKey = :apiKey';
+            personNummer = :personNummer
+            apiKey = :apiKey';
 
             $stmt = $this->conn->prepare($query);
 
@@ -158,7 +158,37 @@ Class User {
             //Print error
             printf("Error: %s.\n", $stmt->error);
             return false;
+    }*/
+
+    public function createUser() {
+        // Create query
+        $query = 'INSERT INTO ' . $this->table . ' SET firstName = :firstName, middleName = :middleName, lastName = :lastName, personNummer = :personNummer';
+
+        // Prepare statement
+        $stmt = $this->conn->prepare($query);
+
+        // Clean data
+        $this->firstName = htmlspecialchars(strip_tags($this->firstName));
+        $this->middleName = htmlspecialchars(strip_tags($this->middleName));
+        $this->lastName = htmlspecialchars(strip_tags($this->lastName));
+        $this->personNummer = htmlspecialchars(strip_tags($this->personNummer));
+
+        // Bind data
+        $stmt->bindParam(':firstName', $this->firstName);
+        $stmt->bindParam(':middleName', $this->middleName);
+        $stmt->bindParam(':lastName', $this->lastName);
+        $stmt->bindParam(':personNummer', $this->personNummer);
+
+        // Execute query
+        if($stmt->execute()) {
+          return true;
     }
+
+    // Print error if something goes wrong
+    printf("Error: %s.\n", $stmt->error);
+
+    return false;
+  }
     
 }
 ?>
