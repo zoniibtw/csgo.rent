@@ -6,7 +6,7 @@
   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
   include_once '../../Config/Database.php';
-  include_once '../../Models/user.php';
+  include_once '../../Models/Post.php';
 
   // Instantiate DB & connect
   $database = new Database();
@@ -24,7 +24,7 @@
   $user->personNummer = $data->personNummer;
 
   // Create user
-  if($user->createUser()) {
+  if($user->create()) {
     echo json_encode(
       array('message' => 'User Created')
     );
