@@ -2,18 +2,13 @@
   class Post {
     // DB stuff
     private $conn;
-    private $table = 'user';
+    private $table = 'test';
 
     // Post Properties
-    public $userID;
     public $firstName;
     public $middleName;
     public $lastName;
-    public $tradeUrl;
-    public $subscription;
     public $personNummer;
-    public $email;
-    public $apiKey;
 
     // Constructor with DB
     public function __construct($db) {
@@ -24,6 +19,7 @@
     // Create Post
     public function create() {
           // Create query
+          echo 'test';
           $query = 'INSERT INTO ' . $this->table . ' SET firstName = :firstName, middleName = :middleName, lastName = :lastName, personNummer = :personNummer';
 
           // Prepare statement
