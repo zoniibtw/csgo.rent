@@ -5,26 +5,26 @@
   header('Access-Control-Allow-Methods: POST');
   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
-  include_once '../../Config/Database.php';
-  include_once '../../Models/user.php';
+  include_once '../../config/Database.php';
+  include_once '../../models/Post.php';
 
   // Instantiate DB & connect
   $database = new Database();
   $db = $database->connect();
 
   // Instantiate user object
-  $user = new User($db);
+  $post = new Post($db);
 
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
-  $user->firstName = $data->firstName;
-  $user->middleName = $data->middleName;
-  $user->lastName = $data->lastName;
-  $user->personNummer = $data->personNummer;
+  $post->firstName = $data->firstName;
+  $post->middleName = $data->middleName;
+  $post->lastName = $data->lastName;
+  $post->personNummer = $data->personNummer;
 
-  // Create user
-  if($user->createUser()) {
+  // Create post
+  if($post->create()) {
     echo json_encode(
       array('message' => 'User Created')
     );
@@ -33,3 +33,4 @@
       array('message' => 'User Not Created')
     );
   }
+

@@ -1,19 +1,25 @@
 <?php 
-  class User {
+  class Post {
     // DB stuff
     private $conn;
     private $table = 'user';
 
     // Post Properties
+    public $userID;
     public $firstName;
     public $middleName;
     public $lastName;
+    public $tradeUrl;
+    public $subscription;
     public $personNummer;
+    public $email;
+    public $apiKey;
 
     // Constructor with DB
     public function __construct($db) {
       $this->conn = $db;
     }
+
 
     // Create Post
     public function create() {
@@ -45,5 +51,4 @@
 
       return false;
     }
-    
   }
