@@ -164,7 +164,10 @@ Class User {
     
   }*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 1328c5f8 (revert)
 
   public function createUser() {
     // Create query
@@ -195,6 +198,9 @@ printf("Error: %s.\n", $stmt->error);
 
 return false;
 }
+<<<<<<< HEAD
+>>>>>>> parent of 1328c5f8 (revert)
+=======
 >>>>>>> parent of 1328c5f8 (revert)
     
 }
