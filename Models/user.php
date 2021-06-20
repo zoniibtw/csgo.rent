@@ -118,9 +118,9 @@ Class User {
                     return false;
             }
 
-    public function createUser() {
+    /*public function createUser() {
         echo 'test';
-        /*
+        
         function RandomString()
         {
             $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -161,8 +161,8 @@ Class User {
     printf("Error: %s.\n", $stmt->error);
 
     return false;
-    */
-  }
+    
+  }*/
     
 }
 ?>
