@@ -8,6 +8,8 @@
   include_once '../../config/Database.php';
   include_once '../../models/Post.php';
 
+  echo 'hej';
+
   // Instantiate DB & connect
   $database = new Database();
   $db = $database->connect();
