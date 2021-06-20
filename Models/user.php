@@ -19,10 +19,6 @@ Class User {
         $this->conn = $db;
     }
 
-    public function auth() {
-        
-    }
-
     public function readUser(){
 
         $query = 'SELECT * FROM ' . $this->table . '';
