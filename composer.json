@@ -1,0 +1,14 @@
+{
+    "name": "https://github.com/zoniibtw/csgo.rent/tree/API",
+    "description": "CS:GO Project where you can rent skins via BankID.",
+    "type": "project",
+    "require": {
+        "alrik11es/cowsayphp": "^1.2"
+    },
+    "authors": [
+        {
+            "name": "Niklas Jörgensen",
+            "email": "niklas.jorgensen@hotmail.com"
+        }
+    ]
+}
