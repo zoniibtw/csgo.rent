@@ -31,12 +31,12 @@ con.connect(function (err) {
 
                 console.log(ret);
 
-                var sql = "INSERT INTO skin (skinID, market_name, name, icon_url, link, steamID, price) VALUES ";
+                var sql = "INSERT INTO skin (skinID, market_name, name, icon_url, link, steamID, price, float_value, patternSeed) VALUES ";
                 ret.forEach(item => {
                     if (item == ret[ret.length - 1]) {
-                        sql += "('" + item.id + "','" + item.market_name + "','" + item.name + "','" + item.icon_url + "','" + item.link + "','" + item.steamid + "','" + item.price + "')";
+                        sql += "('" + item.id + "','" + item.market_name + "','" + item.name + "','" + item.icon_url + "','" + item.link + "','" + item.steamid + "','" + item.price + "','" + item.float + "','" + item.patternSeed + "')";
                     } else {
-                        sql += "('" + item.id + "','" + item.market_name + "','" + item.name + "','" + item.icon_url + "','" + item.link + "','" + item.steamid + "','" + item.price + "'),";
+                        sql += "('" + item.id + "','" + item.market_name + "','" + item.name + "','" + item.icon_url + "','" + item.link + "','" + item.steamid + "','" + item.price + "','" + item.float + "','" + item.patternSeed + "'),";
                     } 
                 });
 
