@@ -19,56 +19,25 @@ function Settings() {
               <div className="settings-h1">
                 <h1>Personlig info</h1>
               </div>
-              <div className="settings-grid">
-                <div className="grid-item profile">
-                  <div className="profile-container">
-                    <h1>Profil</h1>
-                  </div>
-                  <div className="profile">
-                    <div className="profile-container inf-container">
-                      <img></img>
-                      <a>Anton Persson Somoza</a>
+              <div className="settings-boxes">
+                <div className="settings-wrap">
+                  <div className="settings-wrap-item">
+                    <div className="settings-wrap-title">
+                      <h1>Profil</h1>
                     </div>
-                    <div className="information-container">
-                      <div className="citizens-container inf-container">
-                        <p>Personnummer:</p><input></input>
+                    <div className="settings-wrap-column">
+                      <div className="settings-user">
+                        <img></img>
+                        <p></p>
                       </div>
-                      <div className="register-date-container inf-container">
-                        <p>Registerings datum:</p><a>2021-06-08</a>
-                      </div>
-                      <div className="total-loan-container inf-container">
-                        <p>Totala lån:</p><a>5</a>
-                      </div>
+                      <div className="settings-fullname"></div>
+                      <div className="settings-register-date"></div>
+                      <div className="settings-total-trades"></div>
                     </div>
                   </div>
-                </div>
-                <div className="grid-item sub">
-                  <div className="sub-container">
-                    <h1>Prenumeration</h1>
-                  </div>
-                  <div className="subscription">
-                    <p className="first-sub-text">Du har inga aktiva prenumerationer. Du kan välja en prenumeration som passar dig under csgo.rent/plans.</p>
-                    <p className="second-sub-text">Nu kan du prova en 7 dagar fri period.</p>
-                  </div>
-                  <div className="sub-button-container">
-                    <button>PROVA NU</button>
-                  </div>
-                </div>
-                <div className="grid-item info">
-                  <div className="info-container">
-                    <h1>Allmän information</h1>
-                    <div className="information">
-                      <div className="trade-url inf-container">
-                        <div className="trade-url-item inf-container">
-                          <p>Trade-URL:</p><input></input>
-                        </div>
-                        <div className="trade-btns inf-container">
-                          <a>Få länken</a><a>Ange</a>
-                        </div>
-                      </div>
-                      <div className="steam-info inf-container">
-                        <p>Steam ID64:</p><a>76561199159859756</a>
-                      </div>
+                  <div className="settings-wrap-item">
+                    <div className="settings-wrap-title">
+                      <h1>Profil</h1>
                     </div>
                   </div>
                 </div>

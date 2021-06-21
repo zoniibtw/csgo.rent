@@ -9,9 +9,9 @@ function Header() {
           <a>CSGO.RENT</a>
         </div>
         <ul className="header-links">
-          <li><Link to="/home"></Link></li>
-          <li><Link to="/home"></Link></li>
-          <li><Link to="/home"></Link></li>
+          <li><Link className="header-link-text" to="/home">HOME</Link></li>
+          <li><Link className="header-link-text" to="/home">MARKET</Link></li>
+          <li><Link className="header-link-text" to="/home">SUBSCRIPTIONS</Link></li>
         </ul>
         <div className="header-account">
           <div className="header-nickname"></div>
