@@ -9,7 +9,7 @@ function Item() {
 
   useEffect(() => {
     setLoading(true);
-    fetch('https://csgo-rent-api-lrib5.ondigitalocean.app/API/Skins/readSkins.php')
+    fetch('https://sample-php-qzuyy.ondigitalocean.app/API/Skins/readSkins.php')
     .then((res) => res.json())
     .then((data) => {
       setData(data.data);
