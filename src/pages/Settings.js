@@ -57,7 +57,7 @@ function Settings() {
                 <div className="grid-item info">
                   <div className="info-container">
                     <h1>Allmän information</h1>
-                    <div className="info">
+                    <div className="information">
                       <div className="trade-url inf-container">
                         <div className="trade-url-item inf-container">
                           <p>Trade-URL:</p><input></input>
