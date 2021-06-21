@@ -13,7 +13,6 @@ Class User {
     public $subscription;
     public $personNummer;
     public $email;
-    public $apiKey;
 
     public function __construct($db){
         $this->conn = $db;
