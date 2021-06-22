@@ -72,7 +72,7 @@ class Popup extends React.Component {
                 <div className="button-container-register">
                   <button className="register-btn">Registrera</button>
                 </div>
-                <div className="overall-information">
+                <div className="overall-login-information">
                   <div className="a-container">
                   <a>Information</a>
                   <a>EULA</a>
