@@ -1,7 +1,7 @@
 import Header from '../components/Header-Footer/header';
 import React from 'react';
 import Avatar from '../img/avatar.jpg'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './css/Settings.css';
 
 function Settings() {
@@ -86,41 +86,41 @@ function Settings() {
               </div>
               <div className="overall-information">
                 <div className="overall-information-container">
-                <div className="settings-wrap-title">
-                      <div className="settings-wrap-title-container">
-                        <h1>Profil</h1>
+                  <div className="settings-wrap-title">
+                    <div className="settings-wrap-title-container">
+                      <h1>Profil</h1>
+                    </div>
+                  </div>
+                  <div className="settings-wrap-column">
+                    <div className="settings-citizens-id">
+                      <div className="settings-citizens-id-container">
+                        <p>Personnummer: </p><input></input>
                       </div>
                     </div>
-                    <div className="settings-wrap-column">
-                      <div className="settings-citizens-id">
-                        <div className="settings-citizens-id-container">
-                          <p>Personnummer: </p><input></input>
-                        </div>
-                      </div>
-                      <div className="settings-divider-container">
-                        <div className="settings-divider"></div>
-                      </div>
-                      <div className="settings-trade-link-container">
-                        <div className="settings-trade-link">
-                          <p>Trade-Link: </p><input></input>
-                        </div>
-                      </div>
-                      <div className="settings-divider-container">
-                        <div className="settings-divider"></div>
-                      </div>
-                      <div className="settings-trade-link-container">
-                        <div className="settings-trade-link">
-                          <p>SteamID64: </p><p>76561199159859756</p>
-                        </div>
+                    <div className="settings-divider-container">
+                      <div className="settings-divider"></div>
+                    </div>
+                    <div className="settings-trade-link-container">
+                      <div className="settings-trade-link">
+                        <p>Trade-Link: </p><input></input>
                       </div>
                     </div>
+                    <div className="settings-divider-container">
+                      <div className="settings-divider"></div>
+                    </div>
+                    <div className="settings-trade-link-container">
+                      <div className="settings-trade-link">
+                        <p>SteamID64: </p><p>76561199159859756</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
   );
 }
 

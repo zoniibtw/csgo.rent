@@ -5,13 +5,14 @@
 .settings-page {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .settings-container {
   display: flex;
   justify-content: center;
-  width: 80%;
+  width: 100%;
 }
 
 .settings-divider-container {
@@ -21,9 +22,9 @@
 }
 
 .settings-divider {
-  width: 85%;
+  width: 100%;
   height: 1px;
-  background-color: #9b9b9b;
+  background-color: #d3d3d3;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -58,21 +59,22 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-color: #36363c;
+  background-color: white;
   border-radius: 4px;
   width: 31.5vw;
+  padding: 25px;
 }
 
 .settings-wrap-title {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: .7rem;
 }
 
 .settings-wrap-title-container {
-  width: 85%;
+  width: 100%;
   display: flex;
-  margin-bottom: 0.7rem;
 }
 
 .settings-wrap-column {
@@ -89,7 +91,7 @@
 .settings-user-container {
   display: flex;
   align-items: center;
-  width: 85%;
+  width: 100%;
 }
 
 .settings-user img {
@@ -108,7 +110,7 @@
 .settings-fullname-container {
   display: flex;
   align-items: center;
-  width: 85%;
+  width: 100%;
 }
 
 .settings-register-date {
@@ -120,7 +122,7 @@
 .settings-register-date-container {
   display: flex;
   align-items: center;
-  width: 85%;
+  width: 100%;
 }
 
 .settings-total-trades {
@@ -132,7 +134,7 @@
 .settings-total-trades-container {
   display: flex;
   align-items: center;
-  width: 85%;
+  width: 100%;
 }
 
 .subscription-wrap {
@@ -142,7 +144,7 @@
 }
 
 .subscription-wrap-container {
-  width: 85%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -183,8 +185,13 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-color: #36363c;
+  background-color: white;
   border-radius: 4px;
+  padding: 25px;
+}
+
+.overall-information-container {
+  width: 100%;
 }
 
 .settings-citizens-id {
@@ -194,9 +201,19 @@
 }
 
 .settings-citizens-id-container {
-  width: 85%;
+  width: 100%;
   display: flex;
   align-items: center;
+}
+
+.settings-citizens-id-container input {
+  box-sizing: border-box;
+  height: 1.1vw;
+  border: none;
+  background: rgb(245, 245, 245);
+  border-radius: 0.25vw;
+  padding-left: 10px;
+  margin-left: 1%;
 }
 
 .settings-trade-link-container {
@@ -206,7 +223,17 @@
 }
 
 .settings-trade-link {
-  width: 85%;
+  width: 100%;
   display: flex;
   align-items: center;
+}
+
+.settings-trade-link input {
+  box-sizing: border-box;
+  height: 1.1vw;
+  border: none;
+  background: rgb(245, 245, 245);
+  border-radius: 0.25vw;
+  padding-left: 10px;
+  margin-left: 1%;
 }
