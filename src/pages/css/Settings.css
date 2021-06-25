@@ -2,6 +2,10 @@
   visibility: hidden;
 }
 
+.lower {
+  margin-top: 25px;
+}
+
 .settings-page {
   display: flex;
   justify-content: center;
@@ -31,8 +35,19 @@
 
 .setting-nav {
   width: 10%;
+  flex-direction: column;
+}
+
+.setting-nav-container {
   display: flex;
   flex-direction: column;
+}
+
+.setting-nav-container a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .settings-overall {
@@ -69,7 +84,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
 }
 
 .settings-wrap-title-container {

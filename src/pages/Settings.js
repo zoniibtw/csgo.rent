@@ -11,9 +11,11 @@ function Settings() {
       <div className="settings-page">
         <div className="settings-container">
           <div className="setting-nav">
-            <a>Personlig info</a>
-            <a>Historik</a>
-            <a>Säkerhet</a>
+            <div className="setting-nav-container">
+              <a>PERSONLIG INFO</a>
+              <a>HISTORIK</a>
+              <a>SÄKERHET</a>
+            </div>
           </div>
           <div className="settings-overall">
             <div className="settings-overall-container">
@@ -73,7 +75,7 @@ function Settings() {
                     <div className="subscription-wrap">
                       <div className="subscription-wrap-container">
                         <div className="subscription-none-active">
-                          <p>Du har inga aktiva prenumerationer. Du kan lära dig mer om prenumerationerna i csgo.rent/subscriptions.</p>
+                          <p>Du har inga aktiva prenumerationer. Du kan lära dig mer om prenumerationerna här csgo.rent/subscriptions.</p>
                         </div>
                         <div className="subscription-where">
                           <p>Nu får du 25% rabatt första månaden.</p>
@@ -115,6 +117,16 @@ function Settings() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div className="settings-overall-container lower">
+              <div className="settings-h1">
+                <h1>Historik</h1>
+              </div>
+            </div>
+            <div className="settings-overall-container lower">
+              <div className="settings-h1">
+                <h1>Säkerhet</h1>
               </div>
             </div>
           </div>
