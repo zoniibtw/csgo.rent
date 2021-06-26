@@ -23,6 +23,7 @@
 
 .subscription-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -30,7 +31,9 @@
   background-color: #ffffff;
   border-radius: 1vh;
   width: 16.5vw;
-  height: 49.1vh;
+  min-width: 275px;
+  height: 47.8vh;
+  min-height: 400px;
 }
 
 .title-box {
@@ -39,10 +42,10 @@
 }
 
 .title-box > h1 {
-  font-size: 1.05vw;
+  font-size: 110%;
   color: #444444;
-  margin-top: 0.3vw;
-  margin-bottom: 0.3vw;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .border-container {
@@ -56,14 +59,14 @@
 .border-box {
   background-color: #7b2cbf;
   border-radius: 3px;
-  width: 1.8vw;
-  height: 0.45vh;
+  width: 32px;
+  height: 4px;
   position: absolute;
 }
 
 .border-box-two {
   background-color: #d2d2d2;
-  height: 0.1vh;
+  height: 1px;
   width: 100%;
 }
 
@@ -71,11 +74,11 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 1.8vh;
+  margin-top: 5.1%;
 }
 
 .item-img > img {
-  width: 8.3vw;
+  width: 50%;
   height: auto;
 }
 
@@ -91,7 +94,7 @@
 }
 
 .item-value {
-  font-size: 1.4vh;
+  font-size: 45%;
   position: relative;
 }
 
@@ -103,7 +106,7 @@
 }
 
 .item-price {
-  font-size: 3.8vh;
+  font-size: 145%;
 }
 
 .item-price > p {
@@ -112,7 +115,7 @@
 }
 
 .item-month {
-  font-size: 1.4vh;
+  font-size: 45%;
   position: relative;
 }
 
@@ -127,19 +130,21 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 2.2vh;
+  margin-top: 5%;
 }
 
-.item-button > button {
+.item-button button {
   width: 8vw;
+  min-width: 125px;
   height: 4vh;
+  min-height: 32px;
 
   color: #7b2cbf;
   border: none;
   border-radius: 0.5vh;
   border: solid 0.25vh #7b2cbf;
   background-color: white;
-  font-size: 1.65vh;
+  font-size: 85%;
   font-weight: 600;
   letter-spacing: 0.2vh;
   cursor: pointer;
@@ -149,19 +154,21 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 2.2vh;
+  margin-top: 5%;
 }
 
-.standard > button {
+.standard button {
   width: 8vw;
+  min-width: 125px;
   height: 4vh;
+  min-height: 32px;
 
   color: white;
   border: none;
   border-radius: 0.5vh;
   border: solid 0.25vh #7b2cbf;
   background-color: #7b2cbf;
-  font-size: 1.65vh;
+  font-size: 85%;
   font-weight: 600;
   letter-spacing: 0.2vh;
   cursor: pointer;
@@ -170,36 +177,36 @@
 .info-box {
   display: flex;
   justify-content: center;
-  margin-top: 2vh;
+  margin-top: 5%;
 }
 
 .info-item {
   list-style: none;
   display: flex;
-  margin-bottom: 1vh;
+  margin-bottom: 5%;
   align-items: center;
 }
 
-.info-item > img {
-  height: 1.3vh;
+.info-item img {
+  height: 70%;
   width: auto;
 }
 
-.info-item > p {
-  font-size: 1.35vh;
-  margin-left: 0.75vh;
+.info-item p {
+  font-size: 75%;
+  margin-left: 5px;
   color: #444444;
 }
 
 .popular {
   background-color: #7b2cbf;
   width: 100%;
-  margin-top: 0.3vh;
+  margin-top: 1%;
 }
 
-.popular > p {
+.popular p {
   color: white;
-  font-size: 1.5vh;
+  font-size: 72%;
   font-weight: 700;
   padding-top: 0.35vh;
   padding-bottom: 0.35vh;
@@ -212,11 +219,29 @@
   margin-top: 0.3vh;
 }
 
-.price-worth > p {
+.price-worth p {
   color: white;
-  font-size: 1.5vh;
+  font-size: 72%;
   font-weight: 700;
   padding-top: 0.35vh;
   padding-bottom: 0.35vh;
   text-align: center;
+}
+
+@media only screen and (max-width: 1391px) {
+  .sub-item {
+    margin-bottom: 4%;
+  }
+}
+
+@media only screen and (max-width: 1048px) {
+  .section-two-container {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 1015px) {
+  .subscription-container {
+    justify-content: center;
+  }
 }

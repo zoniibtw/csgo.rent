@@ -7,7 +7,7 @@ function SectionTwo() {
     <div className="section-two">
       <div className="section-two-container">
         <h1>Vi erbjuder dessa abonnemang</h1>
-        <div className="subscription-container grid-container">
+        <div className="subscription-container">
 
         <div className="sub-item">
           <div className="title-box">
