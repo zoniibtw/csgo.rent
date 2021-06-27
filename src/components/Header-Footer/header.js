@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className="header">
       <div className="header-container">
-        <div className="logo-type">
+        <div className="logo-type-img">
           <a><Link to="/home">CSGO.RENT</Link></a>
         </div>
 

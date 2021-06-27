@@ -24,7 +24,7 @@ class HeaderHome extends React.Component {
       <div className="header-home">
         <div className="header-container">
           <div className="logo-type">
-            <a><Link to="/home">CSGO.RENT</Link></a>
+            <Link to="/home" className="logo-type-link">CSGO.RENT</Link>
           </div>
           <div className="log-in">
             <button onClick={this.togglePopup.bind(this)} className="login-button">Logga in med BankID</button>

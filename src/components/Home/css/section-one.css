@@ -93,10 +93,167 @@
 }
 
 .item-text {
-  min-width: auto;
-  max-width: 14vw;
+  width: 14vw;
 }
 
 .item-text > p {
   font-size: 0.8vw;
+}
+
+.item-four {
+  margin-top: 0rem;
+}
+
+.item-three {
+  margin-top: 0rem;
+}
+
+@media only screen and (max-width: 1500px) {
+  .title > h1 {
+    font-size: 1.3rem;
+  }
+
+  .instruction-container {
+    flex-wrap: wrap;
+  }
+
+  .instruction-item {
+    width: 210px;
+    min-width: 210px;
+  }
+
+  .item-text {
+    width: 210px;
+  }
+
+  .item-text > p {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .login > button {
+    width: 150px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .instruction {
+    margin-top: 4vh;
+  }
+
+  .title {
+    margin-bottom: 1vh;
+  }
+
+  .description-login {
+    width: 95%;
+  }
+
+  .description {
+    width: 472px;
+  }
+
+  .description > h1 {
+    font-size: 2.1rem;
+  }
+
+  .description > p {
+    font-size: 0.85rem;
+  }
+
+  .instruction-container {
+    flex-wrap: wrap;
+  }
+
+  .item-four {
+    margin-top: 1.5rem;
+  }
+
+  .title > h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .item-three {
+    margin-top: 1.5rem;
+  }
+
+  .title > h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .login {
+    display: none;
+  }
+
+  .description-login {
+    width: 415px;
+    justify-content: center;
+  }
+
+  .description {
+    width: 100%;
+    min-width: 320px;
+  }
+
+  .description > h1 {
+    font-size: 2rem;
+  }
+
+  .description > p {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .instruction-container {
+    display: table;
+    margin: 0 auto;
+  }
+
+  .instruction-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .instruction-icon > img {
+    height: 2.5vh;
+  }
+
+  .money-icon > img {
+    height: 2.25vh !important;
+    width: auto !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .description-login {
+    width: 300px;
+    min-width: 320px;
+    justify-content: center;
+  }
+
+  .login {
+    display: none;
+  }
+
+  .description-login {
+    justify-content: center;
+  }
+
+  .description {
+    width: 100%;
+    min-width: 320px;
+  }
+
+  .description > h1 {
+    font-size: 1.6rem;
+  }
+
+  .description > p {
+    font-size: 0.65rem;
+  }
 }

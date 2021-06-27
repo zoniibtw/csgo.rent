@@ -14,12 +14,12 @@
   justify-content: space-between;
 }
 
-.logo-type {
+.logo-type-img {
   height: 35px;
   width: auto;
 }
 
-.logo-type a {
+.logo-type-img a {
   font-size: 2.2vh;
   font-weight: 700;
   letter-spacing: 0.3vw;
