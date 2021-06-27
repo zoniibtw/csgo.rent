@@ -5,7 +5,7 @@ import Check from '../../img/icon-check.png'
 function SectionTwo() {
   return (
     <div className="section-two">
-      <div className="section-two-container">
+      <div className="section-two-container2">
         <h1>Vi erbjuder dessa abonnemang</h1>
         <div className="subscription-container">
 

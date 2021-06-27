@@ -19,7 +19,6 @@ function Footer() {
         <div className="footer-links">
           <Link><a>Information</a></Link>
           <Link><a>Abonnemang</a></Link>
-          <Link><a>Vilka vi är</a></Link>
           <Link><a>Köp idag</a></Link>
         </div>
 

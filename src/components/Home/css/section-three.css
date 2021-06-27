@@ -13,7 +13,7 @@
   text-align: center;
 }
 
-.about-title > h1 {
+.about-title h1 {
   font-size: 1.6vw;
 }
 
@@ -29,16 +29,84 @@
   margin-top: 2vh;
 }
 
-.management-item > img {
+.management-item img {
   width: 7.5vw;
   height: 7.5vw;
   border-radius: 100%;
 }
 
-.management-info > h3 {
+.management-info h3 {
   font-size: 1.2vw;
 }
 
-.management-info > p {
+.management-info p {
   font-size: 0.6vw;
+}
+
+@media only screen and (max-width: 1529px) {
+  .about-title h1 {
+    font-size: 1.8vw;
+  }
+
+  .management-item img {
+    width: 9vw;
+    height: 9vw;
+    border-radius: 100%;
+  }
+
+  .management-info h3 {
+    font-size: 1.4vw;
+  }
+
+  .management-info p {
+    font-size: 0.9vw;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .about-title h1 {
+    font-size: 2vw;
+  }
+
+  .management-item img {
+    width: 112px;
+    height: 112px;
+    border-radius: 100%;
+  }
+
+  .management-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .management-info p {
+    font-size: 0.8rem;
+  }
+
+  .management-container {
+    width: 438px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .about-title h1 {
+    font-size: 1.1rem;
+  }
+
+  .management-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+  }
+
+  .management-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .management-info p {
+    font-size: 0.6rem;
+  }
+
+  .management-container {
+    width: 320px;
+  }
 }
