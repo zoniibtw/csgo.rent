@@ -1,5 +1,6 @@
 .section-one {
   color: white;
+  padding-bottom: 20vh;
 }
 
 .description-container {
@@ -226,6 +227,11 @@
   .money-icon > img {
     height: 2.25vh !important;
     width: auto !important;
+  }
+
+  .section-one {
+    color: white;
+    padding-bottom: 0vh;
   }
 }
 

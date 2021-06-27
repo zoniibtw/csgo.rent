@@ -16,3 +16,16 @@
   background-color: rgba(28, 237, 38, 0.1);
   border: 1px solid #1ced3f;
 }
+
+A:link {
+  text-decoration: none !important;
+}
+A:hover {
+  text-decoration: none !important;
+}
+A:active {
+  text-decoration: none !important;
+}
+A:visited {
+  text-decoration: none !important;
+}
