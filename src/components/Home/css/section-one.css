@@ -237,8 +237,6 @@
 
 @media only screen and (max-width: 400px) {
   .description-login {
-    width: 300px;
-    min-width: 280px;
     justify-content: center;
   }
 
@@ -251,12 +249,12 @@
   }
 
   .description {
-    width: 100%;
-    min-width: 320px;
+    width: 295px;
+    min-width: 280px;
   }
 
   .description > h1 {
-    font-size: 1.6rem;
+    font-size: 1.44rem;
   }
 
   .description > p {
