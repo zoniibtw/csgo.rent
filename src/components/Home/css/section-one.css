@@ -238,7 +238,7 @@
 @media only screen and (max-width: 400px) {
   .description-login {
     width: 300px;
-    min-width: 320px;
+    min-width: 280px;
     justify-content: center;
   }
 
