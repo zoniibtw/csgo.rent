@@ -15,7 +15,7 @@ class Market extends React.Component{
   };
 
   async componentDidMount() {
-    const url = "https://sample-php-qzuyy.ondigitalocean.app/API/Skins/searchSkin.php?name="+state.name;
+    const url = "https://sample-php-qzuyy.ondigitalocean.app/API/Skins/searchSkin.php?name="+this.state.name;
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
