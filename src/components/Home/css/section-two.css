@@ -18,7 +18,7 @@
   text-align: center;
   font-size: 1.6vw;
   margin-bottom: 3vh;
-  color: #444444;
+  color: white;
 }
 
 .subscription-container {
@@ -28,7 +28,7 @@
 }
 
 .sub-item {
-  background-color: #ffffff;
+  background-color: #292929;
   border-radius: 1vh;
   width: 16.5vw;
   min-width: 275px;
@@ -44,7 +44,7 @@
 
 .title-box > h1 {
   font-size: 110%;
-  color: #444444;
+  color: rgba(255, 255, 255, 0.85);
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -66,7 +66,7 @@
 }
 
 .border-box-two {
-  background-color: #d2d2d2;
+  background-color: #1b1b1b;
   height: 1px;
   width: 100%;
 }
@@ -103,7 +103,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  color: #444444;
+  color: white;
 }
 
 .item-price {
@@ -111,7 +111,7 @@
 }
 
 .item-price > p {
-  color: #444444;
+  color: white;
   font-weight: 700;
 }
 
@@ -124,7 +124,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  color: #444444;
+  color: white;
 }
 
 .item-button {
@@ -140,11 +140,11 @@
   height: 4vh;
   min-height: 32px;
 
-  color: #7b2cbf;
+  color: rgba(255, 255, 255, 0.85);
   border: none;
   border-radius: 0.5vh;
   border: solid 0.25vh #7b2cbf;
-  background-color: white;
+  background-color: #292929;
   font-size: 85%;
   font-weight: 600;
   letter-spacing: 0.2vh;
@@ -196,7 +196,7 @@
 .info-item p {
   font-size: 75%;
   margin-left: 5px;
-  color: #444444;
+  color: rgba(255, 255, 255, 0.705);
 }
 
 .popular {
