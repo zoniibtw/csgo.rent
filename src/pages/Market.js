@@ -6,7 +6,7 @@ import Item from '../components/Market/items/item';
 
 function Market(){
 
-  const [name, setName] = useState();
+  const [name, setName] = useState("");
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
