@@ -8,7 +8,7 @@ function SectionThree() {
     <div className="section-three">
       <div className="about-us-container">
         <div className="about-title">
-          <h1>Vem/vilka består vi av?</h1>
+          <h1>Vårt team</h1>
         </div>
         <div className="management-container">
           <div className="management-item">

@@ -30,7 +30,7 @@ input::-webkit-inner-spin-button {
   margin: auto;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 99;
-  color: black;
+  color: white;
 }
 
 #popup {
@@ -50,7 +50,7 @@ input::-webkit-inner-spin-button {
   top: 32%;
   bottom: 40%;
   margin: auto;
-  background: white;
+  background: #1f1f1f;
   z-index: 99;
   border-radius: 1vh;
 }
@@ -72,8 +72,8 @@ input::-webkit-inner-spin-button {
 .register-btn {
   width: 100%;
   height: 2vw;
-  background-color: white;
-  border: solid 0.2vh #7b2cbf;
+  background-color: #1f1f1f;
+  border: solid 0.3vh #7b2cbf;
   border-radius: 0.25vw;
   color: #7b2cbf;
   text-decoration: none;
@@ -111,9 +111,11 @@ input::-webkit-inner-spin-button {
   width: 100%;
   height: 2vw;
   margin-bottom: 0.8vh;
-  border: solid rgb(141, 141, 141) 1.5px;
+  border: solid rgb(77, 77, 77) 1.5px;
   border-radius: 0.25vw;
   padding-left: 10px;
+  background-color: #292929;
+  color: white;
 }
 
 .button-container-login {
