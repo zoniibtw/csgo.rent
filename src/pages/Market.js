@@ -1,40 +1,44 @@
 import Header from '../components/Header-Footer/header';
-import React, { Component, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 import './css/Market.css';
 import Item from '../components/Market/items/item';
 
-class Market extends React.Component{
-  state = {
-    name: ""
-  };
+function Market(){
 
-  handleChange = event => {
-    console.log(event.target.value);
-    this.setState({ name: event.target.value });
-  };
+  const [name, setName] = useState();
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState();
 
-  async componentDidMount() {
-    const url = "https://sample-php-qzuyy.ondigitalocean.app/API/Skins/readSkins.php";
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-  }
+  useEffect(() => {
+    setLoading(true);
+    fetch("https://sample-php-qzuyy.ondigitalocean.app/API/Skins/searchSkin.php?name="+name)
+    .then((res) => res.json())
+    .then((data) => {
+      setData(data.data);
+    })
+    .catch((err) => {
+      setError(err);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+  }, [name]);
 
-  render() {
     return (
         <div className="Market">
           <Header />
           <div className="items-section">
             <div className="items-container" >
-              <input type="text" placeholder="Search..." onChange={this.handleChange} />
+              <input type="text" placeholder="Search..." value={name} onChange={e => setName(e.target.value)} />
+              <p>{data.map((item) => item.name)}</p>
               <Item />
             </div>
           </div>
   
         </div>
     );
-  }
 }
 
 
