@@ -1,5 +1,5 @@
 import Header from '../components/Header-Footer/header';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 import './css/Market.css';
 import Item from '../components/Market/items/item';
@@ -10,8 +10,12 @@ function Market(){
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
+  const isMounted = useRef(false);
 
   useEffect(() => {
+    if(name == ""){
+      setName(null);
+    }else{
     setLoading(true);
     fetch("https://sample-php-qzuyy.ondigitalocean.app/API/Skins/searchSkin.php?name="+name)
     .then((res) => res.json())
@@ -23,7 +27,7 @@ function Market(){
     })
     .finally(() => {
       setLoading(false);
-    });
+    })};
   }, [name]);
 
     return (
@@ -31,10 +35,14 @@ function Market(){
           <Header />
           <div className="items-section">
             <div className="items-container" >
-              <input type="text" placeholder="Search..." value={name} onChange={e => setName(e.target.value)} />
-              <div class="searchResults">
+              <div className="searchContainer">
+              <div className="search">
+              <input type="text" placeholder="Search..." className="searchInput" value={name} onChange={e => setName(e.target.value)} />
+              </div>
                 {data.map((item) => (
-                  <p class="resultsName">{item.name}</p>
+                  <div className="searchResults">
+                  <p className="resultsName">{item.name}</p>
+                  </div>
                 ))}
               </div>
               <Item />

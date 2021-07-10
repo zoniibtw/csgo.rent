@@ -21,3 +21,57 @@
 p{
   color: white;
 }
+
+.searchContainer{
+  width: 66vw;
+  height: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search{
+  position: relative;
+  width: 66vw;
+  height: auto;
+}
+
+.searchInput:focus{
+  color: #7b2cbf;
+}
+
+.searchInput{
+  position: relative;
+  width: 66vw;
+  padding: 0.2vw 0.1vw 0.1vw 1.5vw;
+  height: 2vh;
+  outline: none;
+  background-image: url('../../img/searchicon.png');
+  background-position: 0.1vh 0.3vh;
+  background-repeat: no-repeat;
+  background-size: 2vh auto;
+  border: 0.1vw solid #ddd;
+  margin-bottom: 1vh;
+}
+
+.searchResults{
+  position: relative;
+  width: 67.5vw;
+  height: auto;
+  padding: 0.1vw;
+  height: 2vh;
+  border: 1px solid #ddd;
+  margin-top: -0.1vw;
+  background-color: #f6f6f6;
+  transition: ease-in-out 0.2s;
+}
+
+.searchResults:hover{
+  background-color: #e6e6e6;
+}
+
+.resultsName{
+  font-size: 1.2vh;
+  color: black;
+}
