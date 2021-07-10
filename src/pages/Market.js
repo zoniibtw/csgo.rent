@@ -34,7 +34,7 @@ function Market(){
               <input type="text" placeholder="Search..." value={name} onChange={e => setName(e.target.value)} />
               <div class="searchResults">
                 {data.map((item) => (
-                  <p class="resultsName" key={item.name}>{item.name}</p>
+                  <p class="resultsName">{item.name}</p>
                 ))}
               </div>
               <Item />
