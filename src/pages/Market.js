@@ -32,7 +32,11 @@ function Market(){
           <div className="items-section">
             <div className="items-container" >
               <input type="text" placeholder="Search..." value={name} onChange={e => setName(e.target.value)} />
-              <p>{data.map((item) => item.name)}</p>
+              <div class="searchResults">
+                {data.map((item) => (
+                  <p class="resultsName" key={item.name}>{item.name}</p>
+                ))}
+              </div>
               <Item />
             </div>
           </div>
