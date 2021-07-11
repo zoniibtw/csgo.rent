@@ -31,7 +31,7 @@ function Item() {
   }
 
   return (
-    <container className="cont">
+    <div className="cont">
     {data.map((item) => (
     <div className="item">
       <div className="item-header-container">
@@ -74,7 +74,7 @@ function Item() {
       </div>
     </div>
     ))}
-    </container>
+    </div>
   );
 }
 export default Item;

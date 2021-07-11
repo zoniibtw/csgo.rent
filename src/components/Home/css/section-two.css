@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .section-two {
   width: 100%;
   display: flex;
