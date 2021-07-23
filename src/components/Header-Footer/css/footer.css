@@ -28,20 +28,21 @@
 .social-media-container > a > img {
   width: 32px;
   height: auto;
+  color: white;
 }
 
 .footer-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 18rem;
   margin-bottom: 0.5rem;
 }
 
 .footer-links > a {
-  font-size: 1rem;
+  font-size: 0.85vw;
   font-weight: 700;
   text-decoration: none;
-  color: black;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .terms-privacy {
@@ -52,13 +53,14 @@
 
 .terms-privacy-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 13.5rem;
   margin-bottom: 0.5rem;
 }
 
 .terms-privacy-container > a {
-  font-size: 1rem;
+  font-size: 0.82vw;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .copy-right {
