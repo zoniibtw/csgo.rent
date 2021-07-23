@@ -44,6 +44,7 @@
   font-weight: 600;
   letter-spacing: 0.08vw;
   cursor: pointer;
+  font-family: "Rubik";
 }
 
 .instruction {
@@ -137,6 +138,7 @@
     width: 150px;
     height: 35px;
     font-size: 0.7rem;
+    font-family: "Rubik";
   }
 
   .instruction {
