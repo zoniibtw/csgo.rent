@@ -68,18 +68,43 @@ module.exports = class Bot {
         });
     };
 
-    async getFloat(inspectLink) {
-        return new Promise(resolve => {
-            var data;
 
-            this.csgo.inspectItem(inspectLink, (result) => {
-                data = result;
-            });
-            setTimeout(() => {
-                resolve(data);
-            }, 15000);
-        });
-    };
+    getSkinValues(skinID){
+        for (let i = 0; i < this.csgo.inventory.length; i++) {
+            try {
+                if(skinID == this.csgo.inventory[i].id){
+                    let callback = {
+                        paint_wear: this.csgo.inventory[i].paint_wear,
+                        paint_seed: this.csgo.inventory[i].paint_seed
+                    };
+    
+                    return callback;
+                }
+            } catch (error) {
+                return "Skin not found in bots inventory.";
+            }
+        }
+    }
+
+    // Function for getting a specified skins wear and float with an inspect link.
+    // async getFloat(inspectLink) {
+    //     return new Promise(resolve => {
+    //         var data;
+    //         var assetid = "";
+    //         var d = "";
+    //         var callback; 
+    //         this.csgo.inspectItem(inspectLink, (result) => {
+    //             console.log(result);
+    //             data = result;
+    //         });
+    //         setTimeout(() => {
+    //             if(data == undefined){
+    //                 data = "Request timed-out (15000ms)";
+    //             }
+    //             resolve(data);
+    //         }, 60000);
+    //     });
+    // };
 
 
 
@@ -88,15 +113,18 @@ module.exports = class Bot {
             var data;
             this.community.getMarketItem(730, item, (err, marketItem) => {
                 if (err) {
-                    data = "error";
+                    throw err;
                 } else {
                     data = marketItem.lowestPrice;
                     //console.log(data);
                 }
             });
             setTimeout(() => {
+                if(data == undefined){
+                    data = "Request timed-out (10000ms)";
+                }
                 resolve(data);
-            }, 5500);
+            }, 20000);
         });
     };
 
