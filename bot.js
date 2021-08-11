@@ -1,11 +1,9 @@
 /* -- Packages -- */
 
-var io = require('socket.io-client');
 const express = require('express');
 const config = require('./config.json');
 const { privateDecrypt } = require('crypto');
 const { setInterval } = require('timers');
-const { request } = require('http');
 const Bot = require('./botClass.js');
 const DBQuery = require('./querySender.js');
 const { timeout } = require('async');
@@ -94,6 +92,53 @@ async function updateInventory() {
     let unresolved = new Array();
     let timer = 1000;
     let test = 0;
+
+    Promise.all(unresolved).then(() => {
+        /*DBSender.insertInventory(result).then(callback => {
+            console.log(callback);
+        });*/
+        console.log(result);
+        return;
+    });
+
+};
+
+
+
+
+
+
+// function priceRequestQueue(market_name, timeout){
+//     return new Promise(resolve => {
+//         var data;
+
+//         setTimeout(() => {
+//             console.log("GO!");
+//             bots[0].getItemPrice(market_name).then((value) => {
+                
+//                 if (value == "error") {
+//                     price = "not_found";
+//                 } else {
+//                     //console.log(value);
+//                     data = value;
+//                 }
+//             });
+//         }, timeout);
+
+//         setTimeout(() => {
+//             if(data == undefined){
+//                 data = "Request timed-out ("+ (5000 + timeout) +")";
+//             }
+//             resolve(data);
+//         }, (25000 + timeout));
+//     });
+// }
+
+
+/*
+
+OLD pricequeue thingy
+
     // for (let item of result) {
 
     //     unresolved.push(priceRequestQueue(item.market_name, timer).then((value) => {
@@ -109,38 +154,9 @@ async function updateInventory() {
     //     }
     // }
 
-    Promise.all(unresolved).then(() => {
-        /*DBSender.insertInventory(result).then(callback => {
-            console.log(callback);
-        });*/
-        console.log(result);
-        return;
-    });
+    OLD pricequeue thingy
 
-};
 
-function priceRequestQueue(market_name, timeout){
-    return new Promise(resolve => {
-        var data;
 
-        setTimeout(() => {
-            console.log("GO!");
-            bots[0].getItemPrice(market_name).then((value) => {
-                
-                if (value == "error") {
-                    price = "not_found";
-                } else {
-                    //console.log(value);
-                    data = value;
-                }
-            });
-        }, timeout);
 
-        setTimeout(() => {
-            if(data == undefined){
-                data = "Request timed-out ("+ (5000 + timeout) +")";
-            }
-            resolve(data);
-        }, (25000 + timeout));
-    });
-}
+*/
