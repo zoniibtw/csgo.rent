@@ -35,7 +35,11 @@ body {
   background-color: #292929;
   border-radius: 1vh;
   padding-bottom: 2vh;
+<<<<<<< Updated upstream
   width: 16.5vw;
+=======
+  width: 16vw;
+>>>>>>> Stashed changes
   min-width: 288px;
 }
 
